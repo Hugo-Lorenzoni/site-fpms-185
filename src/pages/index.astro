@@ -1,0 +1,104 @@
+---
+import { Image } from "astro:assets";
+
+import Layout from "@layouts/Layout.astro";
+
+import statueFPMs from "@images/statue-fpms.jpg";
+import comiteFede from "@images/comité-fédé.jpg";
+
+const comite = {
+  president: "Tom Leroy",
+  vp: "Antoine Collet",
+  secretaire: "Louise Lemineur",
+  tresorier: "Antoine Musin",
+  dre: "Léo Vander Beken",
+};
+---
+
+<Layout title="Accueil">
+  <main class="container mx-auto space-y-6 px-2 pt-4">
+    <section
+      class="relative -z-10 h-[calc(100vh_-_10rem)] overflow-hidden rounded-3xl shadow-xl"
+    >
+      <Image
+        class="-z-10 h-full object-cover"
+        src={statueFPMs}
+        alt="Statue des deux fondateurs de la Faculté polytechnique de Mons, Guibal et Devillez"
+        quality={30}
+        width={1920}
+        height={1280}
+        format="webp"
+      />
+      <div class="absolute inset-0 flex items-end pb-16">
+        <h1
+          class="mx-auto w-[100%-3rem] max-w-4xl px-8 pe-16 text-4xl font-semibold text-white shadow-black text-shadow-title"
+        >
+          Bienvenue sur le site de la
+          <span
+            class="bg-gradient-to-r from-blue-900 to-blue-600 bg-clip-text text-transparent drop-shadow-white text-shadow-none"
+            >Fédération des Etudiants</span
+          >
+           de la Faculté Polytechnique de Mons !
+        </h1>
+      </div>
+      <!-- <h1 class="absolute bottom-12 left-[15%] right-[15%] z-10 pr-[15%] text-4xl font-semibold text-white text-shadow-title shadow-black ">
+			  Bienvenue sur le site de la
+			  <span class="drop-shadow-white text-shadow-none text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-blue-600">Fédération des Etudiants</span>
+			  de la Faculté Polytechnique de Mons !
+			</h1>  -->
+    </section>
+    <section
+      class="mx-auto max-w-5xl space-y-2 rounded-lg border-l-4 border-blue-900 bg-white px-6 py-3 font-medium shadow-xl"
+    >
+      <h2 class="text-xl">Qu'est-ce que la Fédération des Etudiants FPMs ?</h2>
+      <p>
+        La <strong>Fédération des Etudiants FPMs</strong>
+         (aussi appelée <i>la Fédé</i>), fondée en 1837, est l'organisme
+        représentatif et folklorique des étudiants de la Faculté Polytechnique
+        de Mons. Cette Fédération est dirigée par la
+        <strong>Fédérale</strong> et est composée de douze
+        <strong>Cercles</strong>, six <strong>Commissions</strong> et quatre <strong
+          >Régionales</strong
+        >.
+      </p>
+
+      <ul>
+        <h3>Ses buts principaux sont :</h3>
+        <li>
+          - La représentation des étudiants Polytech auprès des instances
+          académiques
+        </li>
+        <li>
+          - L'organisation d'évènements folkloriques, culturels,
+          philantropiques, sportifs et festifs
+        </li>
+      </ul>
+    </section>
+    <section
+      class="mx-auto max-w-5xl rounded-lg border-r-4 border-blue-900 bg-white font-medium shadow-xl sm:flex"
+    >
+      <div class="aspect-video flex-1 overflow-hidden">
+        <Image
+          class="h-full w-full rounded-lg object-cover"
+          src={comiteFede}
+          alt="Comité de la Fédération des étudiants de la Faculté Polytechnique de Mons (FPMs)"
+          quality={30}
+          format="webp"
+        />
+      </div>
+      <div
+        class="inline-flex w-full flex-col justify-center px-6 py-6 sm:w-auto"
+      >
+        <h2 class="mx-auto max-w-fit pb-4 text-xl">La Fédérale</h2>
+        <ul>
+          <li><strong>Président :</strong>{" "}{comite.president}</li>
+          <li><strong>Vice-président :</strong>{" "}{comite.vp}</li>
+          <li><strong>Secrétaire :</strong>{" "}{comite.secretaire}</li>
+          <li><strong>Trésorier :</strong>{" "}{comite.tresorier}</li>
+          <li><strong>DRE* :</strong>{" "}{comite.dre}</li>
+          <li class="text-xs italic">*Délégué aux Relations Extérieures</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</Layout>
