@@ -1,0 +1,173 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+const cercles = [
+  {
+    name: "Bar",
+    href: "/cercles&commissions/bar",
+    imageSrc: await Astro.glob("@images/cercles/bar.jpg").then(
+      (files) => files[0].default,
+    ),
+    color: "",
+  },
+  {
+    name: "CAP",
+    href: "/cercles&commissions/cap",
+    imageSrc: await Astro.glob("@images/cercles/cap.jpg").then(
+      (files) => files[0].default,
+    ),
+    color: "",
+  },
+  {
+    name: "CPV",
+    href: "/cercles&commissions/cpv",
+    imageSrc: await Astro.glob("@images/cercles/cpv.jpg").then(
+      (files) => files[0].default,
+    ),
+    color: "",
+  },
+  {
+    name: "Magellan",
+    href: "/cercles&commissions/magellan",
+    imageSrc: await Astro.glob("@images/cercles/magellan.jpg").then(
+      (files) => files[0].default,
+    ),
+    color: "",
+  },
+  {
+    name: "Mons Mines",
+    href: "/cercles&commissions/mons-mines",
+    imageSrc: await Astro.glob("@images/cercles/mons-mines.jpg").then(
+      (files) => files[0].default,
+    ),
+    color: "",
+  },
+  {
+    name: "Mutu",
+    href: "/cercles&commissions/mutu",
+    imageSrc: await Astro.glob("@images/cercles/mutu.jpg").then(
+      (files) => files[0].default,
+    ),
+    color: "",
+  },
+  {
+    name: "Peyresq",
+    href: "/cercles&commissions/peyresq",
+    imageSrc: await Astro.glob("@images/cercles/peyresq.jpg").then(
+      (files) => files[0].default,
+    ),
+    color: "",
+  },
+  {
+    name: "Culturel",
+    href: "/cercles&commissions/q",
+    imageSrc: await Astro.glob("@images/cercles/q.jpg").then(
+      (files) => files[0].default,
+    ),
+    color: "",
+  },
+  {
+    name: "Radio Extra",
+    href: "/cercles&commissions/radio-extra",
+    imageSrc: await Astro.glob("@images/cercles/radio-extra.jpg").then(
+      (files) => files[0].default,
+    ),
+    color: "",
+  },
+  {
+    name: "Scientifique",
+    href: "/cercles&commissions/scientifique",
+    imageSrc: await Astro.glob("@images/cercles/scientifique.jpg").then(
+      (files) => files[0].default,
+    ),
+    color: "",
+  },
+  {
+    name: "Sono-Danse-Musique",
+    href: "/cercles&commissions/sdm",
+    imageSrc: await Astro.glob("@images/cercles/sdm.jpg").then(
+      (files) => files[0].default,
+    ),
+    color: "",
+  },
+  {
+    name: "Les Sports",
+    href: "/cercles&commissions/sports",
+    imageSrc: await Astro.glob("@images/cercles/sports.jpg").then(
+      (files) => files[0].default,
+    ),
+    color: "",
+  },
+];
+
+const commissions = [
+  {
+    name: "Commission Web",
+    href: "/cercles&commissions/web",
+    imageSrc: await Astro.glob("@images/commissions/placeholder.jpg").then(
+      (files) => files[0].default,
+    ),
+    color: "",
+  },
+];
+---
+
+<Layout title="Cercles & Commissions">
+  <main class="class= container mx-auto space-y-4 px-4 py-4">
+    <h1
+      class="bg-gradient-to-r from-blue-900 to-blue-600 bg-clip-text text-3xl font-bold text-transparent"
+    >
+      Cercles & Commissions FPMs
+    </h1>
+    <section class="space-y-3">
+      <h2 class="text-xl font-semibold">Cercles fédérés</h2>
+      <ul class="grid grid-cols-4 gap-4">
+        {
+          cercles.map((cercle) => (
+            <li class="overflow-hidden rounded-xl shadow-lg">
+              <a class="relative" href={cercle.href}>
+                <>
+                  <Image
+                    class="-z-10 h-full object-cover"
+                    src={cercle.imageSrc}
+                    alt={cercle.name}
+                    quality={30}
+                    format="webp"
+                  />
+                  <h3 class="drop-shadow-title absolute bottom-3 left-4 text-xl font-medium text-white">
+                    {cercle.name}
+                  </h3>
+                </>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section><section class="space-y-3">
+      <h2 class="text-xl font-semibold">Commissions</h2>
+      <ul class="grid grid-cols-4 gap-4">
+        {
+          commissions.map((commission) => (
+            <li class="overflow-hidden rounded-xl shadow-lg">
+              <a class="relative" href={commission.href}>
+                <>
+                  <Image
+                    class="-z-10 h-full object-cover"
+                    src={commission.imageSrc}
+                    alt={commission.name}
+                    quality={30}
+                    format="webp"
+                  />
+                  <h3 class="drop-shadow-title absolute bottom-3 left-4 text-xl font-medium text-white">
+                    {commission.name}
+                  </h3>
+                </>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </main>
+</Layout>

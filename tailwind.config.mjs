@@ -15,6 +15,12 @@ export default {
       },
       dropShadow: {
         white: ["0 1px 4px white", "0 0px 5px white"],
+        title: [
+          "0 0px 4px black",
+          "0 0px 20px black",
+          "0 0px 30px black",
+          "0 0px 40px black",
+        ],
       },
       textShadow: {
         sm: "0 1px 2px var(--tw-shadow-color)",

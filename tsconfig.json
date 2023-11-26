@@ -9,5 +9,6 @@
       "@layouts/*": ["src/layouts/*"],
       "@images/*": ["src/images/*"]
     }
-  }
+  },
+  "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.astro"]
 }
