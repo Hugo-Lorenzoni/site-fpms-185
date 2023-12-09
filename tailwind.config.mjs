@@ -21,6 +21,11 @@ export default {
           "0 0px 30px black",
           "0 0px 40px black",
         ],
+        normal: [
+          "0 1px 8px rgb(0 0 0 / 0.8)",
+          "0 0px 15px rgb(0 0 0 / 0.5)",
+          "0 2px 2px rgb(0 0 0 / 0.5)",
+        ],
       },
       textShadow: {
         sm: "0 1px 2px var(--tw-shadow-color)",

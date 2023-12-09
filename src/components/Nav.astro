@@ -57,11 +57,14 @@ const navItems = [
       </svg>
       <div>Fédération des Etudiants FPMs</div>
     </a>
-    <ul class="flex justify-between gap-4">
+    <ul class="flex justify-between gap-2">
       {
         navItems.map((navItem) => (
-          <li class="m-auto">
-            <a class="relative px-2 py-1" href={navItem.href}>
+          <li class="mx-auto flex items-center justify-center">
+            <a
+              class="relative px-1 py-1 after:absolute after:bottom-0 after:left-0 after:z-50 after:h-[3px] after:w-0 after:rounded-full after:bg-blue-900 after:duration-500 hover:after:w-full"
+              href={navItem.href}
+            >
               {navItem.title}
             </a>
           </li>
