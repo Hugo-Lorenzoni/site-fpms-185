@@ -2,101 +2,94 @@
 import Layout from "../../layouts/Layout.astro";
 import { Image } from "astro:assets";
 
+import Bar from "@images/cercles/bar.jpg";
+import CAP from "@images/cercles/cap.jpg";
+import CPV from "@images/cercles/cpv.jpg";
+import Magellan from "@images/cercles/magellan.jpg";
+import MM from "@images/cercles/mons-mines.jpg";
+import Mutu from "@images/cercles/mutu.jpg";
+import Peyresq from "@images/cercles/peyresq.jpg";
+import Q from "@images/cercles/q.jpg";
+import Radio from "@images/cercles/radio-extra.jpg";
+import Scientifique from "@images/cercles/scientifique.jpg";
+import SDM from "@images/cercles/sdm.jpg";
+import Sports from "@images/cercles/sports.jpg";
+import CommissionWeb from "@images/commissions/commission-web.jpg";
+import CommissionHistorique from "@images/commissions/commission-historique.jpg";
+import ECOmmission from "@images/commissions/placeholder.jpg";
+import FPMaths from "@images/commissions/placeholder.jpg";
+
 const cercles = [
   {
     name: "Bar",
     href: "/cercles&commissions/bar",
-    imageSrc: await Astro.glob("@images/cercles/bar.jpg").then(
-      (files) => files[0].default,
-    ),
+    image: Bar,
     color: "",
   },
   {
     name: "CAP",
     href: "/cercles&commissions/cap",
-    imageSrc: await Astro.glob("@images/cercles/cap.jpg").then(
-      (files) => files[0].default,
-    ),
+    image: CAP,
     color: "",
   },
   {
     name: "CPV",
     href: "/cercles&commissions/cpv",
-    imageSrc: await Astro.glob("@images/cercles/cpv.jpg").then(
-      (files) => files[0].default,
-    ),
+    image: CPV,
     color: "",
   },
   {
     name: "Magellan",
     href: "/cercles&commissions/magellan",
-    imageSrc: await Astro.glob("@images/cercles/magellan.jpg").then(
-      (files) => files[0].default,
-    ),
+    image: Magellan,
     color: "",
   },
   {
     name: "Mons Mines",
     href: "/cercles&commissions/mons-mines",
-    imageSrc: await Astro.glob("@images/cercles/mons-mines.jpg").then(
-      (files) => files[0].default,
-    ),
+    image: MM,
     color: "",
   },
   {
     name: "Mutu",
     href: "/cercles&commissions/mutu",
-    imageSrc: await Astro.glob("@images/cercles/mutu.jpg").then(
-      (files) => files[0].default,
-    ),
+    image: Mutu,
     color: "",
   },
   {
     name: "Peyresq",
     href: "/cercles&commissions/peyresq",
-    imageSrc: await Astro.glob("@images/cercles/peyresq.jpg").then(
-      (files) => files[0].default,
-    ),
+    image: Peyresq,
     color: "",
   },
   {
     name: "Culturel",
     href: "/cercles&commissions/q",
-    imageSrc: await Astro.glob("@images/cercles/q.jpg").then(
-      (files) => files[0].default,
-    ),
+    image: Q,
     color: "",
   },
   {
     name: "Radio Extra",
     href: "/cercles&commissions/radio-extra",
-    imageSrc: await Astro.glob("@images/cercles/radio-extra.jpg").then(
-      (files) => files[0].default,
-    ),
+    image: Radio,
     color: "",
   },
   {
     name: "Scientifique",
     href: "/cercles&commissions/scientifique",
-    imageSrc: await Astro.glob("@images/cercles/scientifique.jpg").then(
-      (files) => files[0].default,
-    ),
+    image: Scientifique,
     color: "",
   },
   {
     name: "Sono-Danse-Musique",
     href: "/cercles&commissions/sdm",
-    imageSrc: await Astro.glob("@images/cercles/sdm.jpg").then(
-      (files) => files[0].default,
-    ),
+    image: SDM,
     color: "",
   },
   {
     name: "Les Sports",
     href: "/cercles&commissions/sports",
-    imageSrc: await Astro.glob("@images/cercles/sports.jpg").then(
-      (files) => files[0].default,
-    ),
+    image: Sports,
     color: "",
   },
 ];
@@ -105,16 +98,32 @@ const commissions = [
   {
     name: "Commission Web",
     href: "/cercles&commissions/web",
-    imageSrc: await Astro.glob("@images/commissions/placeholder.jpg").then(
-      (files) => files[0].default,
-    ),
+    image: CommissionWeb,
+    color: "",
+  },
+  {
+    name: "Commission Historique",
+    href: "/cercles&commissions/comhisto",
+    image: CommissionHistorique,
+    color: "",
+  },
+  {
+    name: "ÉCOmmission",
+    href: "/cercles&commissions/éco",
+    image: ECOmmission,
+    color: "",
+  },
+  {
+    name: "FPMaths",
+    href: "/cercles&commissions/fpmaths",
+    image: FPMaths,
     color: "",
   },
 ];
 ---
 
 <Layout title="Cercles & Commissions">
-  <main class="class= container mx-auto space-y-4 px-4 py-4">
+  <main class="container mx-auto space-y-4 px-4 py-4">
     <h1
       class="bg-gradient-to-r from-blue-900 to-blue-600 bg-clip-text text-3xl font-bold text-transparent"
     >
@@ -122,20 +131,22 @@ const commissions = [
     </h1>
     <section class="space-y-3">
       <h2 class="text-xl font-semibold">Cercles fédérés</h2>
-      <ul class="grid grid-cols-4 gap-4">
+      <ul
+        class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+      >
         {
           cercles.map((cercle) => (
-            <li class="overflow-hidden rounded-xl shadow-lg">
+            <li class="overflow-hidden rounded-2xl shadow-lg">
               <a class="relative" href={cercle.href}>
                 <>
                   <Image
                     class="-z-10 h-full object-cover"
-                    src={cercle.imageSrc}
+                    src={cercle.image}
                     alt={cercle.name}
                     quality={30}
                     format="webp"
                   />
-                  <h3 class="drop-shadow-normal absolute bottom-3 left-4 text-xl font-medium text-white">
+                  <h3 class="absolute bottom-3 left-4 text-xl font-medium text-white drop-shadow-normal">
                     {cercle.name}
                   </h3>
                 </>
@@ -144,9 +155,12 @@ const commissions = [
           ))
         }
       </ul>
-    </section><section class="space-y-3">
+    </section>
+    <section class="space-y-3">
       <h2 class="text-xl font-semibold">Commissions</h2>
-      <ul class="grid grid-cols-4 gap-4">
+      <ul
+        class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+      >
         {
           commissions.map((commission) => (
             <li class="overflow-hidden rounded-xl shadow-lg">
@@ -154,12 +168,12 @@ const commissions = [
                 <>
                   <Image
                     class="-z-10 h-full object-cover"
-                    src={commission.imageSrc}
+                    src={commission.image}
                     alt={commission.name}
                     quality={30}
                     format="webp"
                   />
-                  <h3 class="absolute bottom-3 left-4 text-xl font-medium text-white drop-shadow-title">
+                  <h3 class="absolute bottom-3 left-4 text-xl font-medium text-white drop-shadow-normal">
                     {commission.name}
                   </h3>
                 </>

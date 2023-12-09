@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
 
 import statueFPMs from "@images/statue-fpms.jpg";
-import comiteFede from "@images/comité-fédé.jpg";
+import comiteFede from "@images/comités/fédé.jpg";
 
 const comite = {
   president: "Tom Leroy",
@@ -31,7 +31,7 @@ const comite = {
       />
       <div class="absolute inset-0 flex items-end pb-16">
         <h1
-          class="mx-auto w-[100%-3rem] max-w-4xl px-8 pe-16 text-4xl font-semibold text-white shadow-black text-shadow-title"
+          class="mx-auto w-[100%-3rem] max-w-4xl px-8 pe-16 text-4xl font-semibold text-white shadow-black text-shadow-title [text-wrap:balance]"
         >
           Bienvenue sur le site de la
           <span

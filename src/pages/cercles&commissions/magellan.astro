@@ -1,0 +1,114 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+import MagellanImage from "@images/cercles/magellan.jpg";
+import Comite from "@images/comités/magellan.jpg";
+
+const cercle = "Cercle Magellan";
+
+const president = "Kevin Dubrule";
+const tresorier = "Hugo Lorenzoni";
+const secretaire = "Lucy Bogaert";
+---
+
+<Layout title={cercle}>
+  <main class="container mt-4 space-y-6">
+    <div class="h-64 w-full overflow-hidden rounded-2xl">
+      <Image
+        class="-z-10 h-full w-full object-cover"
+        src={MagellanImage}
+        alt={cercle}
+        quality={100}
+        format="webp"
+      />
+    </div>
+    <div class="mx-auto max-w-5xl space-y-6">
+      <h1 class="text-5xl font-semibold">{cercle}</h1>
+      <section class="space-y-2 text-justify">
+        <h2 class="text-2xl font-medium">Description</h2>
+        <p>
+          Le Cercle Magellan est le Cercle informatique de la Faculté
+          Polytechnique de Mons. Il est composé d'un groupe d'étudiants, appelés
+          "Admins". Cette fine équipe est passionnée par l'informatique et se
+          regroupe régulièrement pour jouer aux jeux vidéo ou pour réaliser des
+          projets de solutions informatiques, tels que des sites web ou de
+          l'hébergement.
+        </p>
+        <p>
+          Le Magellan est également chargé des réseaux Internet des Cités
+          Houzeau et Franeau, et sert de "HelpDesk" pour ces cités étudiantes.
+        </p>
+        <p>
+          Nous disposons d'un local au sein de la Cité Houzeau (local 500) où
+          nous mettons à disposition des PC en accès libre avec une session
+          privée. Les PC disponibles sont très performants et permettent aussi
+          bien de jouer à tes jeux préférés que de travailler sur des projets,
+          le tout dans l'ambiance typique du Magellan.
+        </p>
+        <p>
+          Le Cercle Magellan organise de plus le GAME, une LAN-Party de 48h où
+          plus de 100 joueurs participent chaque année à plusieurs tournois de
+          jeux vidéo.
+        </p>
+        <p>
+          Si tu es intéressé par l'informatique, les jeux vidéos, ou juste que
+          tu as soif d'apprendre, n'hésite pas à nous rejoindre au local 500 ou
+          à contacter un membre du comité !
+        </p>
+      </section>
+      <section
+        class="rounded-lg border-r-4 border-blue-900 bg-white font-medium shadow-xl sm:flex"
+      >
+        <div class="aspect-video flex-1 overflow-hidden">
+          <Image
+            class="h-full w-full rounded-lg object-cover"
+            src={Comite}
+            alt="Comité de la Fédération des étudiants de la Faculté Polytechnique de Mons (FPMs)"
+            quality={30}
+            format="webp"
+          />
+        </div>
+        <div
+          class="inline-flex w-full flex-col justify-center px-6 py-6 sm:w-auto"
+        >
+          <h2 class="mx-auto max-w-fit pb-4 text-xl">Comité</h2>
+          <ul>
+            <li><strong>Président :</strong>{" "}{president}</li>
+            <li><strong>Trésorier :</strong>{" "}{tresorier}</li>
+            <li><strong>Secrétaire :</strong>{" "}{secretaire}</li>
+          </ul>
+        </div>
+      </section>
+      <section class="space-y-2">
+        <h2 class="text-2xl font-medium">Réseaux sociaux</h2>
+        <ul class="space-y-1">
+          <li>
+            Site web : <a
+              class="text-blue-900 underline"
+              href="https://www.magellan.fpms.ac.be/">magella.fpms.ac.be</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-blue-900 underline"
+              href="https://www.facebook.com/CercleMagellan">Facebook</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-blue-900 underline"
+              href="https://www.instagram.com/cercle_magellan_fpms">Instagram</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-blue-900 underline"
+              href="https://twitter.com/MagellanFPMs">Twitter</a
+            >
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+</Layout>
