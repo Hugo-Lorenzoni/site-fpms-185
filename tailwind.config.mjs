@@ -31,7 +31,7 @@ export default {
         normal: [
           "0 1px 8px rgb(0 0 0 / 0.8)",
           "0 0px 15px rgb(0 0 0 / 0.5)",
-          "0 2px 2px rgb(0 0 0 / 0.5)",
+          "0 2px 2px rgb(0 0 0 / 0.8)",
         ],
       },
       textShadow: {
