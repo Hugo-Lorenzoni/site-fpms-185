@@ -18,6 +18,7 @@ import CommissionWeb from "@images/commissions/commission-web.jpg";
 import CommissionHistorique from "@images/commissions/commission-historique.jpg";
 import ECOmmission from "@images/commissions/placeholder.jpg";
 import FPMaths from "@images/commissions/placeholder.jpg";
+import Grid from "@components/Grid.astro";
 
 const cercles = [
   {
@@ -129,7 +130,7 @@ const commissions = [
     >
       Cercles & Commissions FPMs
     </h1>
-    <section class="space-y-3">
+    <!-- <section class="space-y-3">
       <h2 class="text-xl font-semibold">Cercles fédérés</h2>
       <ul
         class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
@@ -182,6 +183,8 @@ const commissions = [
           ))
         }
       </ul>
-    </section>
+    </section> -->
+    <Grid title="Cercles fédérés" list={cercles} />
+    <Grid title="Commissions" list={commissions} />
   </main>
 </Layout>
