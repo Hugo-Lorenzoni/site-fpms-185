@@ -42,8 +42,25 @@ const locaux = [
     </h1>
     <section class="space-y-3">
       <h2 class="text-xl font-semibold">Présentation</h2>
+      <section
+        class="space-y-2 rounded-lg border-l-4 border-blue-900 bg-white px-6 py-3 font-medium shadow-xl"
+      >
+        <h2 class="text-xl">
+          Cité des étudiants de la Faculté Polytechnique de Mons (FPMs).
+        </h2>
+        <p class="text-justify">
+          La Cité Houzeau est le centre névralgique de la vie étudiante
+          Polytech. Chaque jour, des centaines d'étudiants Polytech s'y
+          rencontrent ou y participent à des activités. En plus du restaurant
+          universitaire Houzeau, on y retrouve tous les locaux gérés par les
+          différents Cercles dont la liste est reprise
+          <a class="text-blue-900 underline" href="#Locaux de la Cité Houzeau">
+            ci-dessous ↓
+          </a>
+        </p>
+      </section>
       <div
-        class="rounded-lg border-r-4 border-blue-900 bg-white font-medium shadow-xl sm:flex"
+        class="rounded-lg border-r-4 border-blue-900 bg-white font-medium shadow-xl md:flex"
       >
         <div class="aspect-video flex-1 overflow-hidden">
           <Image
@@ -55,13 +72,16 @@ const locaux = [
           />
         </div>
         <div
-          class="inline-flex w-full flex-col justify-center px-6 py-6 sm:w-auto"
+          class="inline-flex w-full flex-col justify-center px-6 py-6 md:w-auto"
         >
           <h3 class="mx-auto max-w-fit pb-4 text-xl">En résumé :</h3>
           <ul>
             <li>288 chambres <strong>individuelles</strong> avec sanitaires</li>
+            <li>
+              Centre névralgique de la vie étudiante <strong>Polytech</strong>
+            </li>
             <li>À <strong>10 minutes</strong> de la Grand-Place</li>
-            <li>Boulevard Dolez, 69 à 7000 Mons</li>
+            <li class="mt-2"><i>Boulevard Dolez, 69 à 7000 Mons</i></li>
           </ul>
         </div>
       </div>
