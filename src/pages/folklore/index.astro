@@ -1,0 +1,94 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Grid from "../../components/Grid.astro";
+import { Image } from "astro:assets";
+
+import Carolo from "@images/régionales/carolo.jpg";
+import Frontalière from "@images/régionales/frontaliere.jpg";
+import Centrale from "@images/régionales/centrale.jpg";
+import Boraine from "@images/régionales/boraine.jpg";
+
+import ComiteFêtes from "@images/comités/fetes.jpg";
+
+const fêtes = {
+  name: "Cercle des Fêtes",
+  href: "/folklore/cercle-des-fetes",
+  image: ComiteFêtes,
+  color: "",
+  president: "Maxime Vandenhende",
+  tresorier: "Colin Huart",
+  secretaire: "Charlotte Blondel",
+};
+
+const régionales = [
+  {
+    name: "Carolo",
+    href: "/folklore/carolo",
+    image: Carolo,
+    color: "",
+  },
+  {
+    name: "Frontalière",
+    href: "/folklore/frontaliere",
+    image: Frontalière,
+    color: "",
+  },
+  {
+    name: "Centrale",
+    href: "/folklore/centrale",
+    image: Centrale,
+    color: "",
+  },
+  {
+    name: "Boraine",
+    href: "/folklore/boraine",
+    image: Boraine,
+    color: "",
+  },
+];
+---
+
+<Layout title="Cercles & Commissions">
+  <main class="container mx-auto space-y-6 px-4 py-4">
+    <h1
+      class="bg-gradient-to-r from-blue-900 to-blue-600 bg-clip-text text-3xl font-bold text-transparent"
+    >
+      Folklore
+    </h1>
+    <section class="space-y-3">
+      <h2 class="text-xl font-semibold">Cercle des Fêtes</h2>
+      <div
+        class="rounded-lg border-r-4 border-blue-900 bg-white font-medium shadow-xl sm:flex"
+      >
+        <div class="aspect-video flex-1 overflow-hidden">
+          <Image
+            class="h-full w-full rounded-lg object-cover"
+            src={fêtes.image}
+            alt="Comité de la Fédération des étudiants de la Faculté Polytechnique de Mons (FPMs)"
+            quality={30}
+            format="webp"
+          />
+        </div>
+        <div
+          class="inline-flex w-full flex-col justify-center px-6 py-6 sm:w-auto"
+        >
+          <h3 class="mx-auto max-w-fit pb-4 text-xl">Comité</h3>
+          <ul>
+            <li><strong>Président :</strong>{" "}{fêtes.president}</li>
+            <li><strong>Trésorier :</strong>{" "}{fêtes.tresorier}</li>
+            <li><strong>Secrétaire :</strong>{" "}{fêtes.secretaire}</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <Grid title="Régionales" list={régionales} />
+    <section class="space-y-3">
+      <h2 class="text-xl font-semibold">Chants</h2>
+      <div></div>
+    </section>
+    <section class="space-y-3">
+      <h2 class="text-xl font-semibold">Bleusaille</h2>
+      <div></div>
+    </section>
+  </main>
+</Layout>
