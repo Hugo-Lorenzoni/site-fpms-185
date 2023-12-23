@@ -1,6 +1,6 @@
 ---
-import Grid from "../../components/Grid.astro";
-import Layout from "../../layouts/Layout.astro";
+import Layout from "@layouts/Layout.astro";
+import Grid from "@components/Grid.astro";
 import { Image } from "astro:assets";
 
 import Houzeau from "@images/locaux/cite-houzeau.jpg";
@@ -11,9 +11,13 @@ import _LocalProjection from "@images/locaux/local-de-projection.jpg";
 import _Bibli from "@images/locaux/bibli.jpg";
 import _LocalMutu from "@images/locaux/local-mutu.jpg";
 
+import _SallePP from "@images/locaux/placeholder.jpg";
+import _LocalCAP from "@images/locaux/placeholder.jpg";
 import _400 from "@images/locaux/placeholder.jpg";
 import _600 from "@images/locaux/placeholder.jpg";
 import _700 from "@images/locaux/placeholder.jpg";
+import _800 from "@images/locaux/placeholder.jpg";
+import _LocalCommHisto from "@images/locaux/placeholder.jpg";
 
 const locaux = [
   {
@@ -29,12 +33,12 @@ const locaux = [
   {
     name: "Salle PP",
     href: "/cite-houzeau/salle-pp",
-    image: _400,
+    image: _SallePP,
   },
   {
     name: "CAP",
     href: "/cite-houzeau/cap",
-    image: _400,
+    image: _LocalCAP,
   },
   {
     name: "400 - La Radio",
@@ -59,17 +63,17 @@ const locaux = [
   {
     name: "800 - Salle de sports",
     href: "/cite-houzeau/800",
-    image: _700,
+    image: _800,
   },
   {
     name: "9/10 - Local de projection",
-    href: "/cercles&commissions/q#local de projection",
+    href: "/cercles&commissions/q#projection",
     image: _LocalProjection,
   },
   {
     name: "1100 - Commission historique",
     href: "/cite-houzeau/1100",
-    image: _700,
+    image: _LocalCommHisto,
   },
   {
     name: "11/12 - La Bibli",
