@@ -1,0 +1,41 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Comite from "@components/Comite.astro";
+import Links from "@components/Links.astro";
+
+import { Image } from "astro:assets";
+
+interface Props {
+  cercle: string;
+  imageCercle: ImageMetadata;
+  comite: { role: string; name: string }[];
+  imageComite: ImageMetadata;
+  links?: {
+    name: string;
+    type: string;
+    url: string;
+  }[];
+}
+
+const { cercle, imageCercle, comite, imageComite, links } = Astro.props;
+---
+
+<Layout title={cercle}>
+  <main class="container mt-4 space-y-6" transition:animate="slide">
+    <div class="h-64 w-full overflow-hidden rounded-2xl">
+      <Image
+        class="-z-10 h-full w-full object-cover"
+        src={imageCercle}
+        alt={cercle}
+        quality={100}
+        format="webp"
+      />
+    </div>
+    <div class="mx-auto max-w-5xl space-y-6">
+      <h1 class="text-5xl font-semibold">{cercle}</h1>
+      <slot />
+      <Comite cercle={cercle} imageComite={imageComite} comite={comite} />
+      {links && links[0] ? <Links links={links} /> : ""}
+    </div>
+  </main>
+</Layout>

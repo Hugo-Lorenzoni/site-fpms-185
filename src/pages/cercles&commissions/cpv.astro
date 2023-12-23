@@ -1,162 +1,88 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import { Image } from "astro:assets";
+import LayoutCercle from "@layouts/LayoutCercle.astro";
 
 import _CPV from "@images/cercles/cpv.jpg";
-import Comite from "@images/comités/cpv.jpg";
+import imageComite from "@images/comités/cpv.jpg";
 
 const cercle = "Cercle Photo-Vidéo - CPV";
 
-const president = "Rodrigue Deghorain";
-const responsable_video = "Marithé Hupin";
-const responsable_photo = "Janelle Merlevede";
-const delegue_video = "Sarah Gilles";
-const delegue_photo = "Guillaume Chamart";
+const comite = [
+  {
+    name: "Rodrigue Deghorain",
+    role: "Président",
+  },
+  {
+    name: "Marithé Hupin",
+    role: "Responsable vidéo",
+  },
+  {
+    name: "Janelle Merlevede",
+    role: "Responsable photo",
+  },
+  {
+    name: "Sarah Gilles",
+    role: "Déléguée vidéo",
+  },
+  {
+    name: "Guillaume Chamart",
+    role: "Délégué photo",
+  },
+];
+
+const links = [
+  {
+    name: "Site web",
+    type: "WEBSITE",
+    url: "https://cerclephotovideo.fpms.ac.be/",
+  },
+  {
+    name: "Instagram",
+    type: "INSTAGRAM",
+    url: "https://www.instagram.com/cpvfpms/",
+  },
+  {
+    name: "Facebook",
+    type: "FACEBOOK",
+    url: "https://www.facebook.com/groups/611148859605497/",
+  },
+];
 ---
 
-<Layout title={cercle}>
-  <main class="container mt-4 space-y-6" transition:animate="slide">
-    <div class="h-64 w-full overflow-hidden rounded-2xl">
-      <Image
-        class="-z-10 h-full w-full object-cover"
-        src={_CPV}
-        alt={cercle}
-        quality={100}
-        format="webp"
-      />
-    </div>
-    <div class="mx-auto max-w-5xl space-y-6">
-      <h1 class="text-5xl font-semibold">{cercle}</h1>
-      <section class="space-y-2 text-justify">
-        <h2 class="text-2xl font-medium">Description</h2>
-        <p>
-          Le Cercle Photo-Vidéo (CPV pour les intimes) est le Cercle qui
-          immortalise toutes tes années à la Faculté ! Grâce à nos reporters
-          présents partout, tu peux nous trouver à tous types d'événements
-          organisés au sein de notre belle Faculté : guindailles, soirées
-          ouvertes, évènements de Bleusaille et de Campagnes, Bal des Mines, ...
-        </p>
-        <p>
-          Nous sommes là tout le temps, donc n'hésite pas à nous chercher, nous
-          sommes très souvent repérables par un drapeau orange et les photos
-          sont disponibles après quelques jours sur notre site Internet. Plus
-          besoin de sortir ton téléphone en soirée, tu peux compter sur nous
-          pour remplir ton téléphone de beaux clichés et peut-être aussi te
-          fournir tes souvenirs de guindaille.
-        </p>
-        <p>
-          Cette tradition existe encore aujourd'hui puisque nous, étudiants de
-          la Faculté Polytechnique de Mons, retournons chaque année à Peyresq au
-          début de l'été pour y passer des vacances amplement méritées après une
-          rude session d'examens.
-        </p>
-        <p>
-          Mais ce n'est pas tout ! Si tu as besoin de matériel pour un projet
-          (ou autre chose), que ça soit un appareil photo, une caméra, ou même
-          un écran de projection, tu peux nous contacter, et nous mettrons à
-          disponibilité ce dont tu as besoin, et tout ça gratuitement !
-        </p>
-      </section>
-      <section
-        class="rounded-lg border-r-4 border-blue-900 bg-white font-medium shadow-xl sm:flex"
-      >
-        <div class="aspect-video flex-1 overflow-hidden">
-          <Image
-            class="h-full w-full rounded-lg object-cover"
-            src={Comite}
-            alt="Comité de la Fédération des étudiants de la Faculté Polytechnique de Mons (FPMs)"
-            quality={30}
-            format="webp"
-          />
-        </div>
-        <div
-          class="inline-flex w-full flex-col justify-center px-6 py-6 sm:w-auto"
-        >
-          <h2 class="mx-auto max-w-fit pb-4 text-xl">Comité</h2>
-          <ul>
-            <li><strong>Président :</strong>{" "}{president}</li>
-            <li>
-              <strong>Responsable vidéo :</strong>{" "}{responsable_video}
-            </li>
-            <li>
-              <strong>Responsable photo :</strong>{" "}{responsable_photo}
-            </li>
-            <li><strong>Délégué vidéo :</strong>{" "}{delegue_video}</li>
-            <li><strong>Délégué photo :</strong>{" "}{delegue_photo}</li>
-          </ul>
-        </div>
-      </section>
-      <section class="space-y-2 font-medium">
-        <h2 class="text-2xl">Réseaux sociaux</h2>
-        <ul class="space-y-1 text-blue-900">
-          <li class="flex gap-2">
-            Site web : <a
-              class="flex w-min gap-2 underline duration-150 hover:translate-x-2 hover:opacity-80"
-              href="https://cerclephotovideo.fpms.ac.be/"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-app-window"
-                ><rect x="2" y="4" width="20" height="16" rx="2"></rect><path
-                  d="M10 4v4"></path><path d="M2 8h20"></path><path d="M6 4v4"
-                ></path></svg
-              >cerclephotovideo.fpms.ac.be</a
-            >
-          </li>
-          <li>
-            <a
-              class="flex w-min gap-2 underline duration-150 hover:translate-x-2 hover:opacity-80"
-              href="https://www.instagram.com/cpvfpms/"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-instagram"
-                ><rect width="20" height="20" x="2" y="2" rx="5" ry="5"
-                ></rect><path
-                  d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
-                ></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"
-                ></line></svg
-              >Instagram</a
-            >
-          </li>
-          <li>
-            <a
-              class="flex w-min gap-2 underline duration-150 hover:translate-x-2 hover:opacity-80"
-              href="https://www.facebook.com/groups/611148859605497/"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-facebook"
-                ><path
-                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
-                ></path></svg
-              >Facebook</a
-            >
-          </li>
-        </ul>
-      </section>
-    </div>
-  </main>
-</Layout>
+<LayoutCercle
+  cercle={cercle}
+  imageCercle={_CPV}
+  comite={comite}
+  imageComite={imageComite}
+  links={links}
+>
+  <section class="space-y-2 text-justify">
+    <h2 class="text-2xl font-medium">Description</h2>
+    <p>
+      Le Cercle Photo-Vidéo (CPV pour les intimes) est le Cercle qui immortalise
+      toutes tes années à la Faculté ! Grâce à nos reporters présents partout,
+      tu peux nous trouver à tous types d'événements organisés au sein de notre
+      belle Faculté : guindailles, soirées ouvertes, évènements de Bleusaille et
+      de Campagnes, Bal des Mines, ...
+    </p>
+    <p>
+      Nous sommes là tout le temps, donc n'hésite pas à nous chercher, nous
+      sommes très souvent repérables par un drapeau orange et les photos sont
+      disponibles après quelques jours sur notre site Internet. Plus besoin de
+      sortir ton téléphone en soirée, tu peux compter sur nous pour remplir ton
+      téléphone de beaux clichés et peut-être aussi te fournir tes souvenirs de
+      guindaille.
+    </p>
+    <p>
+      Cette tradition existe encore aujourd'hui puisque nous, étudiants de la
+      Faculté Polytechnique de Mons, retournons chaque année à Peyresq au début
+      de l'été pour y passer des vacances amplement méritées après une rude
+      session d'examens.
+    </p>
+    <p>
+      Mais ce n'est pas tout ! Si tu as besoin de matériel pour un projet (ou
+      autre chose), que ça soit un appareil photo, une caméra, ou même un écran
+      de projection, tu peux nous contacter, et nous mettrons à disponibilité ce
+      dont tu as besoin, et tout ça gratuitement !
+    </p>
+  </section>
+</LayoutCercle>

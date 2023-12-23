@@ -1,0 +1,39 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  cercle: string;
+  imageComite: ImageMetadata;
+  comite: { role: string; name: string }[];
+}
+
+const { cercle, imageComite, comite } = Astro.props;
+
+const altComite = `Comité - ${cercle}`;
+---
+
+<section
+  class="rounded-lg border-r-4 border-blue-900 bg-white font-medium shadow-xl sm:flex"
+>
+  <div class="aspect-video flex-1 overflow-hidden">
+    <Image
+      class="h-full w-full rounded-lg object-cover"
+      src={imageComite}
+      alt={altComite}
+      quality={30}
+      format="webp"
+    />
+  </div>
+  <div class="inline-flex w-full flex-col justify-center px-6 py-6 sm:w-auto">
+    <h2 class="mx-auto max-w-fit pb-4 text-xl">Comité</h2>
+    <ul>
+      {
+        comite.map(({ role, name }) => (
+          <li>
+            <strong>{role} :</strong> {name}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

@@ -1,172 +1,96 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import { Image } from "astro:assets";
+import LayoutCercle from "@layouts/LayoutCercle.astro";
 
 import _Q from "@images/cercles/q.jpg";
-import Comite from "@images/comités/q.jpg";
+import imageComite from "@images/comités/q.jpg";
 
 const cercle = "Cercle Culturel - Q";
 
-const president = "Elisa Bourez";
-const tresorier = "François Cayphas";
-const delegue_bibli = "Chloé Lhoir";
-const delegue_jeu = "Elsa De Volder";
+const comite = [
+  {
+    name: "Elisa Bourez",
+    role: "Présidente",
+  },
+  {
+    name: "François Cayphas",
+    role: "Trésorier",
+  },
+  {
+    name: "Chloé Lhoir",
+    role: "Déléguée Bibli",
+  },
+  {
+    name: "Elsa De Volder",
+    role: "Déléguée Jeux",
+  },
+];
+
+const links = [
+  {
+    name: "Facebook",
+    type: "FACEBOOK",
+    url: "https://www.facebook.com/cercle.culturel.fpms",
+  },
+  {
+    name: "BibliCité 11/12 - Facebook",
+    type: "FACEBOOK",
+    url: "https://www.facebook.com/groups/272164387493",
+  },
+  {
+    name: "Instagram",
+    type: "INSTAGRAM",
+    url: "https://www.instagram.com/qulturel_fpms/",
+  },
+];
 ---
 
-<Layout title={cercle}>
-  <main class="container mt-4 space-y-6" transition:animate="slide">
-    <div class="h-64 w-full overflow-hidden rounded-2xl">
-      <Image
-        class="-z-10 h-full w-full object-cover"
-        src={_Q}
-        alt={cercle}
-        quality={100}
-        format="webp"
-      />
-    </div>
-    <div class="mx-auto max-w-5xl space-y-6">
-      <h1 class="text-5xl font-semibold">{cercle}</h1>
-      <section class="space-y-2 text-justify">
-        <h2 class="text-2xl font-medium">Description</h2>
-        <p>
-          Le Cercle Qulturel ou le Q s'occupe de proposer aux étudiants Polytech
-          des activités culturelles et ludiques ainsi que l'accès à deux locaux
-          situés à la Cité Houzeau, la Bibli et un local de projection.
-        </p>
-        <h3 class="font-medium underline">La Bibli :</h3>
-        <p>
-          La Bibli, située à l'inter-étage 11/12 de la Cité, est un endroit
-          convivial où vous pouvez venir vous détendre après les cours. En
-          effet, la Bibli est ouverte généralement de 18h à 20h et vous propose
-          au choix de la lecture, des jeux de sociétés, une conversation sympa
-          autour d'un verre. Plus de 4000 BDs et moults jeux de sociétés vous
-          attendent donc n'hésitez pas à y passer ! Elle est également
-          disponible sur demande au comité pour des réunions dans un espace
-          cosy.
-        </p>
-        <h3 class="font-medium underline">
-          Le local de projection (au 9/10) :
-        </h3>
-        <p>
-          Le local de projection situé à l'inter-étage 9/10 (d'où son nom) vous
-          permet de regarder films ou séries de votre choix avec vos amis
-          jusqu'à tard le soir. Pour cela, il vous suffit de nous prévenir via
-          notre page Facebook pour que le comité vous ouvre le local. Nous vous
-          demandons simplement de ranger le local quand vous avez fini. Le local
-          est accessible exclusivement en semaine.
-        </p>
-        <h3 class="font-medium underline">Voyage Q :</h3>
-        <p>
-          Chaque année, le Q organise un voyage de quelques jours dans une ville
-          d'Europe durant un week-end du mois de novembre. Ce voyage est ouvert
-          à tous et est proposé à un prix des plus démocratiques. Les années
-          précédentes, les destinations étaient Munich, Hambourg, Vienne,
-          Prague, ...
-        </p>
-        <h3 class="font-medium underline">Autres activités :</h3>
-        <p>
-          Durant l'année, nous proposons différentes activités comme par exemple
-          des soirées jeux, des sorties au cinéma, des sorties culturelles, des
-          soirées projection dans un auditoire, ... Si vous avez des questions
-          ou propositions d'activités, n'hésitez pas à contacter un membre du
-          comité !
-        </p>
-      </section>
-      <section
-        class="rounded-lg border-r-4 border-blue-900 bg-white font-medium shadow-xl sm:flex"
-      >
-        <div class="aspect-video flex-1 overflow-hidden">
-          <Image
-            class="h-full w-full rounded-lg object-cover"
-            src={Comite}
-            alt="Comité de la Fédération des étudiants de la Faculté Polytechnique de Mons (FPMs)"
-            quality={30}
-            format="webp"
-          />
-        </div>
-        <div
-          class="inline-flex w-full flex-col justify-center px-6 py-6 sm:w-auto"
-        >
-          <h2 class="mx-auto max-w-fit pb-4 text-xl">Comité</h2>
-          <ul>
-            <li><strong>Président :</strong>{" "}{president}</li>
-            <li><strong>Trésorier :</strong>{" "}{tresorier}</li>
-            <li><strong>Déléguée Bibli :</strong>{" "}{delegue_bibli}</li>
-            <li><strong>Déléguée Jeux :</strong>{" "}{delegue_jeu}</li>
-          </ul>
-        </div>
-      </section>
-      <section class="space-y-2 font-medium">
-        <h2 class="text-2xl">Réseaux sociaux</h2>
-        <ul class="space-y-1 text-blue-900">
-          <li>
-            <a
-              class="inline-flex gap-2 underline duration-150 hover:translate-x-2 hover:opacity-80"
-              href="https://www.facebook.com/cercle.culturel.fpms"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-facebook"
-                ><path
-                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
-                ></path></svg
-              >Facebook</a
-            >
-          </li>
-          <li>
-            <a
-              class="inline-flex gap-2 underline duration-150 hover:translate-x-2 hover:opacity-80"
-              href="https://www.facebook.com/groups/272164387493"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-facebook"
-                ><path
-                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
-                ></path></svg
-              >BibliCité 11/12 - Facebook</a
-            >
-          </li>
-          <li>
-            <a
-              class="inline-flex gap-2 underline duration-150 hover:translate-x-2 hover:opacity-80"
-              href="https://www.instagram.com/qulturel_fpms/"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-instagram"
-                ><rect width="20" height="20" x="2" y="2" rx="5" ry="5"
-                ></rect><path
-                  d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
-                ></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"
-                ></line></svg
-              >Instagram</a
-            >
-          </li>
-        </ul>
-      </section>
-    </div>
-  </main>
-</Layout>
+<LayoutCercle
+  cercle={cercle}
+  imageCercle={_Q}
+  comite={comite}
+  imageComite={imageComite}
+  links={links}
+>
+  <section class="space-y-2 text-justify">
+    <h2 class="text-2xl font-medium">Description</h2>
+    <p>
+      Le Cercle Qulturel ou le Q s'occupe de proposer aux étudiants Polytech des
+      activités culturelles et ludiques ainsi que l'accès à deux locaux situés à
+      la Cité Houzeau, la Bibli et un local de projection.
+    </p>
+    <h3 class="font-medium underline">La Bibli :</h3>
+    <p>
+      La Bibli, située à l'inter-étage 11/12 de la Cité, est un endroit
+      convivial où vous pouvez venir vous détendre après les cours. En effet, la
+      Bibli est ouverte généralement de 18h à 20h et vous propose au choix de la
+      lecture, des jeux de sociétés, une conversation sympa autour d'un verre.
+      Plus de 4000 BDs et moults jeux de sociétés vous attendent donc n'hésitez
+      pas à y passer ! Elle est également disponible sur demande au comité pour
+      des réunions dans un espace cosy.
+    </p>
+    <h3 class="font-medium underline">Le local de projection (au 9/10) :</h3>
+    <p>
+      Le local de projection situé à l'inter-étage 9/10 (d'où son nom) vous
+      permet de regarder films ou séries de votre choix avec vos amis jusqu'à
+      tard le soir. Pour cela, il vous suffit de nous prévenir via notre page
+      Facebook pour que le comité vous ouvre le local. Nous vous demandons
+      simplement de ranger le local quand vous avez fini. Le local est
+      accessible exclusivement en semaine.
+    </p>
+    <h3 class="font-medium underline">Voyage Q :</h3>
+    <p>
+      Chaque année, le Q organise un voyage de quelques jours dans une ville
+      d'Europe durant un week-end du mois de novembre. Ce voyage est ouvert à
+      tous et est proposé à un prix des plus démocratiques. Les années
+      précédentes, les destinations étaient Munich, Hambourg, Vienne, Prague,
+      ...
+    </p>
+    <h3 class="font-medium underline">Autres activités :</h3>
+    <p>
+      Durant l'année, nous proposons différentes activités comme par exemple des
+      soirées jeux, des sorties au cinéma, des sorties culturelles, des soirées
+      projection dans un auditoire, ... Si vous avez des questions ou
+      propositions d'activités, n'hésitez pas à contacter un membre du comité !
+    </p>
+  </section>
+</LayoutCercle>

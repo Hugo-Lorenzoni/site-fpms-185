@@ -1,81 +1,53 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import { Image } from "astro:assets";
+import LayoutCercle from "@layouts/LayoutCercle.astro";
 
 import _Scientifique from "@images/cercles/scientifique.jpg";
-import Comite from "@images/comités/scientifique.jpg";
+import imageComite from "@images/comités/scientifique.jpg";
 
 const cercle = "Cercle Scientifique";
 
-const president = "Nathan Marcus";
-const secretaire = "Audran Duquène";
+const comite = [
+  { role: "Président", name: "Nathan Marcus" },
+  { role: "Secrétaire", name: "Audran Duquène" },
+];
+
+const links: { name: string; type: string; url: string }[] | undefined = [];
 ---
 
-<Layout title={cercle}>
-  <main class="container mt-4 space-y-6" transition:animate="slide">
-    <div class="h-64 w-full overflow-hidden rounded-2xl">
-      <Image
-        class="-z-10 h-full w-full object-cover"
-        src={_Scientifique}
-        alt={cercle}
-        quality={100}
-        format="webp"
-      />
-    </div>
-    <div class="mx-auto max-w-5xl space-y-6">
-      <h1 class="text-5xl font-semibold">{cercle}</h1>
-      <section class="space-y-2 text-justify">
-        <h2 class="text-2xl font-medium">Description</h2>
-        <p>
-          On dit souvent qu'un ingénieur civil ne sait pas utiliser ses dix
-          doigts et encore moins planter des clous... Le Cercle Scientifique est
-          là pour y remédier !
-        </p>
-        <p>
-          Le Cercle Scientifique est premièrement un Cercle tourné vers l'aide
-          aux étudiants et aux autres Cercles de la Faculté. Comment peut-il
-          vous aider ? Que cela soit pour des petites réparations dans votre kot
-          comme un problème d'armoire ou encore un souci de fenêtre, le Cercle
-          Scientifique est disponible tout au long de l'année pour vous venir en
-          aide !
-        </p>
-        <p>
-          Le Scientifique est aussi le Cercle qui peut vous prêter gratuitement
-          du matériel de bricolage de bonne qualité (tel que des visseuses,
-          scies sauteuses, marteaux, pieds-de-biche, etc…) pour vos projets
-          académiques ou personnels.
-        </p>
-        <p>
-          Le Cercle Scientifique est également le Cercle qui s'implique dans
-          deux des trois méchouis annuels et qui organise chaque année depuis 10
-          ans maintenant la BGT (Big Guinze Theory) avec l'aide du Cercle Radio
-          Extra et du Cercle Magellan. Son plus grand projet annuel reste la
-          construction du char qui défile fièrement dans les rues de Mons depuis
-          plus de 50 ans lors du cortège des étudiants le jour du Baptême !
-        </p>
-      </section>
-      <section
-        class="rounded-lg border-r-4 border-blue-900 bg-white font-medium shadow-xl sm:flex"
-      >
-        <div class="aspect-video flex-1 overflow-hidden">
-          <Image
-            class="h-full w-full rounded-lg object-cover"
-            src={Comite}
-            alt="Comité de la Fédération des étudiants de la Faculté Polytechnique de Mons (FPMs)"
-            quality={30}
-            format="webp"
-          />
-        </div>
-        <div
-          class="inline-flex w-full flex-col justify-center px-6 py-6 sm:w-auto"
-        >
-          <h2 class="mx-auto max-w-fit pb-4 text-xl">Comité</h2>
-          <ul>
-            <li><strong>Président :</strong>{" "}{president}</li>
-            <li><strong>Secrétaire :</strong>{" "}{secretaire}</li>
-          </ul>
-        </div>
-      </section>
-    </div>
-  </main>
-</Layout>
+<LayoutCercle
+  cercle={cercle}
+  imageCercle={_Scientifique}
+  comite={comite}
+  imageComite={imageComite}
+  links={links}
+>
+  <section class="space-y-2 text-justify">
+    <h2 class="text-2xl font-medium">Description</h2>
+    <p>
+      On dit souvent qu'un ingénieur civil ne sait pas utiliser ses dix doigts
+      et encore moins planter des clous... Le Cercle Scientifique est là pour y
+      remédier !
+    </p>
+    <p>
+      Le Cercle Scientifique est premièrement un Cercle tourné vers l'aide aux
+      étudiants et aux autres Cercles de la Faculté. Comment peut-il vous aider
+      ? Que cela soit pour des petites réparations dans votre kot comme un
+      problème d'armoire ou encore un souci de fenêtre, le Cercle Scientifique
+      est disponible tout au long de l'année pour vous venir en aide !
+    </p>
+    <p>
+      Le Scientifique est aussi le Cercle qui peut vous prêter gratuitement du
+      matériel de bricolage de bonne qualité (tel que des visseuses, scies
+      sauteuses, marteaux, pieds-de-biche, etc…) pour vos projets académiques ou
+      personnels.
+    </p>
+    <p>
+      Le Cercle Scientifique est également le Cercle qui s'implique dans deux
+      des trois méchouis annuels et qui organise chaque année depuis 10 ans
+      maintenant la BGT (Big Guinze Theory) avec l'aide du Cercle Radio Extra et
+      du Cercle Magellan. Son plus grand projet annuel reste la construction du
+      char qui défile fièrement dans les rues de Mons depuis plus de 50 ans lors
+      du cortège des étudiants le jour du Baptême !
+    </p>
+  </section>
+</LayoutCercle>

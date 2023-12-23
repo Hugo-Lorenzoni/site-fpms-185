@@ -1,102 +1,71 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import { Image } from "astro:assets";
+import LayoutCercle from "@layouts/LayoutCercle.astro";
 
 import _Peyresq from "@images/cercles/peyresq.jpg";
-import Comite from "@images/comités/peyresq.jpg";
+import imageComite from "@images/comités/peyresq.jpg";
 
 const cercle = "Cercle Peyresq";
 
-const president = "Rémy Lempire";
-const vp = "Perrine Vandicke";
-const tresorier = "Arnaud Draye";
-const secretaire = "Lucas Lambert";
+const comite = [
+  { role: "Président", name: "Rémy Lempire" },
+  { role: "Vice-présidente", name: "Perrine Vandicke" },
+  { role: "Trésorier", name: "Arnaud Draye" },
+  { role: "Secrétaire", name: "Lucas Lambert" },
+];
+
+const links: { name: string; type: string; url: string }[] | undefined = [];
 ---
 
-<Layout title={cercle}>
-  <main class="container mt-4 space-y-6" transition:animate="slide">
-    <div class="h-64 w-full overflow-hidden rounded-2xl">
-      <Image
-        class="-z-10 h-full w-full object-cover"
-        src={_Peyresq}
-        alt={cercle}
-        quality={100}
-        format="webp"
-      />
-    </div>
-    <div class="mx-auto max-w-5xl space-y-6">
-      <h1 class="text-5xl font-semibold">{cercle}</h1>
-      <section class="space-y-2 text-justify">
-        <h2 class="text-2xl font-medium">Description</h2>
-        <p>
-          Cher lecteur, voyageons dans le temps et retournons ensemble au début
-          des années 50. A cette époque, un petit village du sud de la France
-          nommé Peyresq est laissé à l'abandon et seules quelques ruines y sont
-          encore éparpillées par endroits… Mais grâce à l'impulsion de quelques
-          Universités belges (Mons, Bruxelles, Liège, Gembloux), un projet
-          titanesque est amorcé : reconstruire les ruines afin de ressusciter le
-          village !
-        </p>
-        <p>
-          La Fédération des Etudiants Polytech a alors répondu à l'appel du
-          projet et envoyé chaque été pendant plus de 40 ans des étudiants à
-          Peyresq afin de reconstruire le village. Dans la foulée, la Fédé et
-          d'autres associations estudiantines ont également acheté des maisons
-          au village afin d'y héberger leurs étudiants.
-        </p>
-        <p>
-          Cette tradition existe encore aujourd'hui puisque nous, étudiants de
-          la Faculté Polytechnique de Mons, retournons chaque année à Peyresq au
-          début de l'été pour y passer des vacances amplement méritées après une
-          rude session d'examens.
-        </p>
-        <p>
-          Le Cercle Peyresq y possède deux maisons dans lesquelles il organise
-          des vacances pour les étudiants Polytech, où folklore et soleil sont
-          les maîtres-mots. Sur place, le cadre exceptionnel de la région nous
-          assure un panel d'activités diverses telles que la randonnée, le
-          canyoning, la découverte de marchés locaux, … Evidemment, ces vacances
-          ne se passent pas seul et le village est également l'occasion de
-          rencontrer des étudiants venant des quatre coins de la Belgique, qui
-          viennent passer des vacances dans leurs maisons respectives ! Durant
-          le séjour, nous travaillons aussi un peu à l'amélioration de nos
-          maisons via divers travaux (rénovation, coupe de bois, construction
-          d'une table, …).
-        </p>
-        <p>
-          Pendant l'année, nous organisons également des évènements afin de
-          faire découvrir l'ambiance et les traditions de Peyresq. Dégustations
-          de liqueurs, soupers, tournois de pétanque, … sont autant d'occasions
-          de nous rassembler afin de perpétuer l'esprit peyrescan. D'ici là, ne
-          tergiversez pas et venez à la rencontre des membres du comité Peyresq
-          qui vous conteront, avec des yeux remplis de féérie, les milles et une
-          légendes du village !
-        </p>
-      </section>
-      <section
-        class="rounded-lg border-r-4 border-blue-900 bg-white font-medium shadow-xl sm:flex"
-      >
-        <div class="aspect-video flex-1 overflow-hidden">
-          <Image
-            class="h-full w-full rounded-lg object-cover"
-            src={Comite}
-            alt="Comité de la Fédération des étudiants de la Faculté Polytechnique de Mons (FPMs)"
-            quality={30}
-            format="webp"
-          />
-        </div>
-        <div
-          class="inline-flex w-full flex-col justify-center px-6 py-6 sm:w-auto"
-        >
-          <h2 class="mx-auto max-w-fit pb-4 text-xl">Comité</h2>
-          <ul>
-            <li><strong>Président :</strong>{" "}{president}</li>
-            <li><strong>Vice-présidente :</strong>{" "}{vp}</li>
-            <li><strong>Trésorier :</strong>{" "}{tresorier}</li>
-            <li><strong>Secrétaire :</strong>{" "}{secretaire}</li>
-          </ul>
-        </div>
-      </section>
-    </div>
-  </main>
-</Layout>
+<LayoutCercle
+  cercle={cercle}
+  imageCercle={_Peyresq}
+  comite={comite}
+  imageComite={imageComite}
+  links={links}
+>
+  <section class="space-y-2 text-justify">
+    <h2 class="text-2xl font-medium">Description</h2>
+    <p>
+      Cher lecteur, voyageons dans le temps et retournons ensemble au début des
+      années 50. A cette époque, un petit village du sud de la France nommé
+      Peyresq est laissé à l'abandon et seules quelques ruines y sont encore
+      éparpillées par endroits… Mais grâce à l'impulsion de quelques Universités
+      belges (Mons, Bruxelles, Liège, Gembloux), un projet titanesque est amorcé
+      : reconstruire les ruines afin de ressusciter le village !
+    </p>
+    <p>
+      La Fédération des Etudiants Polytech a alors répondu à l'appel du projet
+      et envoyé chaque été pendant plus de 40 ans des étudiants à Peyresq afin
+      de reconstruire le village. Dans la foulée, la Fédé et d'autres
+      associations estudiantines ont également acheté des maisons au village
+      afin d'y héberger leurs étudiants.
+    </p>
+    <p>
+      Cette tradition existe encore aujourd'hui puisque nous, étudiants de la
+      Faculté Polytechnique de Mons, retournons chaque année à Peyresq au début
+      de l'été pour y passer des vacances amplement méritées après une rude
+      session d'examens.
+    </p>
+    <p>
+      Le Cercle Peyresq y possède deux maisons dans lesquelles il organise des
+      vacances pour les étudiants Polytech, où folklore et soleil sont les
+      maîtres-mots. Sur place, le cadre exceptionnel de la région nous assure un
+      panel d'activités diverses telles que la randonnée, le canyoning, la
+      découverte de marchés locaux, … Evidemment, ces vacances ne se passent pas
+      seul et le village est également l'occasion de rencontrer des étudiants
+      venant des quatre coins de la Belgique, qui viennent passer des vacances
+      dans leurs maisons respectives ! Durant le séjour, nous travaillons aussi
+      un peu à l'amélioration de nos maisons via divers travaux (rénovation,
+      coupe de bois, construction d'une table, …).
+    </p>
+    <p>
+      Pendant l'année, nous organisons également des évènements afin de faire
+      découvrir l'ambiance et les traditions de Peyresq. Dégustations de
+      liqueurs, soupers, tournois de pétanque, … sont autant d'occasions de nous
+      rassembler afin de perpétuer l'esprit peyrescan. D'ici là, ne tergiversez
+      pas et venez à la rencontre des membres du comité Peyresq qui vous
+      conteront, avec des yeux remplis de féérie, les milles et une légendes du
+      village !
+    </p>
+  </section>
+</LayoutCercle>
