@@ -1,0 +1,73 @@
+---
+import Grid from "@components/Grid.astro";
+import Layout from "@layouts/Layout.astro";
+
+import BDM from "@images/grands-evenements/placeholder.jpg";
+import ISW from "@images/grands-evenements/placeholder.jpg";
+import Crasino from "@images/grands-evenements/placeholder.jpg";
+import SaintNic from "@images/grands-evenements/placeholder.jpg";
+import Ski from "@images/grands-evenements/placeholder.jpg";
+import VoyageQ from "@images/grands-evenements/placeholder.jpg";
+import VacancesAPeyresq from "@images/grands-evenements/placeholder.jpg";
+import Game from "@images/grands-evenements/placeholder.jpg";
+import Revue from "@images/grands-evenements/placeholder.jpg";
+
+const items = [
+  {
+    name: "Bal des Mines",
+    href: "/grands-evenements/bdm",
+    image: BDM,
+  },
+  {
+    name: "ISW",
+    href: "/grands-evenements/isw",
+    image: ISW,
+  },
+  {
+    name: "Crasino",
+    href: "/grands-evenements/crasino",
+    image: Crasino,
+  },
+  {
+    name: "Saint-Nic",
+    href: "/grands-evenements/saint-nic",
+    image: SaintNic,
+  },
+  {
+    name: "Ski",
+    href: "/grands-evenements/ski",
+    image: Ski,
+  },
+  {
+    name: "Voyage Q",
+    href: "/grands-evenements/voyage-q",
+    image: VoyageQ,
+  },
+  {
+    name: "Vacances à Peyresq",
+    href: "/grands-evenements/vacances-a-peyresq",
+    image: VacancesAPeyresq,
+  },
+  {
+    name: "Game",
+    href: "/grands-evenements/game",
+    image: Game,
+  },
+  {
+    name: "La Revue des Mines",
+    href: "/grands-evenements/revue",
+    image: Revue,
+  },
+];
+---
+
+<Layout title="Les grands événements la polytech">
+  <main class="container mx-auto space-y-6 px-4 py-4">
+    <h1
+      class="bg-gradient-to-r from-blue-900 to-blue-600 bg-clip-text text-3xl font-bold text-transparent"
+    >
+      Les grands événements la polytech
+    </h1>
+    <Grid list={items} />
+  </main>
+</Layout>
