@@ -13,13 +13,13 @@ const navItems = [
 ];
 ---
 
-<header class="sticky top-0 z-20 bg-white" transition:animate="none">
+<header class="top-0 z-20 bg-white sm:sticky" transition:animate="none">
   <nav
-    class="container mx-auto flex flex-col justify-between gap-4 p-4 font-semibold text-blue-900"
+    class="inlne-flex container mx-auto flex-col justify-between gap-4 p-4 font-semibold text-blue-900"
   >
     <a
       href="/"
-      class="flex items-center gap-2 text-lg duration-150 hover:opacity-80"
+      class="inline-flex items-center gap-2 text-lg duration-150 hover:opacity-80"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,7 @@ const navItems = [
       </svg>
       <div>Fédération des Etudiants FPMs</div>
     </a>
-    <ul class="flex justify-between gap-2">
+    <ul class="flex flex-wrap justify-between gap-2 text-sm sm:text-base">
       {
         navItems.map((navItem) => (
           <li class="mx-auto flex items-center justify-center">
