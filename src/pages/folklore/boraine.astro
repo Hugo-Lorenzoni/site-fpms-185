@@ -1,0 +1,69 @@
+---
+import LayoutCercle from "@layouts/LayoutCercle.astro";
+
+import _Boraine from "@images/régionales/boraine.jpg";
+import imageComite from "@images/comités/boraine.jpg";
+
+const cercle = "La Boraine";
+
+const comite = [
+  { role: "Président", name: "Nicolas Destraix" },
+  { role: "Vice-président", name: "Ugo Canet" },
+  { role: "Trésorier", name: "Yoan Laubin" },
+  { role: "Secrétaire", name: "Lukas Richez" },
+  { role: "DRI-R", name: "André Lefèvre" },
+];
+
+const links: { name: string; type: string; url: string }[] | undefined = [];
+---
+
+<LayoutCercle
+  cercle={cercle}
+  imageCercle={_Boraine}
+  comite={comite}
+  imageComite={imageComite}
+  links={links}
+>
+  <section class="space-y-2 text-justify">
+    <h2 class="text-2xl font-medium">Description</h2>
+    <p>
+      Si tu habites ou si tu es allé dans une école à Mons ou dans l'une des
+      communes qui l'entourent, ou encore si tu te sens proche et fier de venir
+      de la région du Borinage, la Boraine est faite pour toi ! Rejoins-nous,
+      nous serons fiers de t'accueillir et de te faire découvrir le folklore
+      borain où rassemblements, amusement et respect des traditions sont les
+      maîtres-mots.
+    </p>
+    <p>
+      Au sein de la Régionale, nous aidons à l'intégration des nouveaux inscrits
+      à la Faculté et nous prônons l'épanouissement de tous les membres. Pour y
+      parvenir, la Boraine permet aux nouveaux arrivants de rencontrer d'autres
+      étudiants issus de leur région et de tisser des liens.
+    </p>
+    <p>
+      Notre Régionale a son importance durant la Bleusaille. En effet, le comité
+      Borain organise au début de l'année un grand nombre d'activités qui
+      servent à rassembler les nouveaux arrivants de la région. Ainsi, dès le
+      début de l'année, tu auras l'occasion à travers diverses activités de
+      partager des moments avec des gens de ton âge mais également avec des plus
+      anciens qui pourront t'aider et te conseiller tout au long de ta vie
+      estudiantine dans les bons moments comme dans les moins bons. Ensemble
+      avec les autres étudiants de la Régionale, tu en apprendras plus sur le
+      folklore, tu auras l'occasion d'apprendre des chants qui nous relient
+      entre Borains à travers toutes les Facultés de Belgique et surtout, si tu
+      t'en montre digne, nous serons fiers de t'accueillir au sein de notre
+      grande famille Boraine où amitié, respect, entraide et amusement règnent
+      en maître. Les liens que tu créeras lors de la Bleusaille seront très
+      forts et dureront encore bien des années après la vie facultaire !
+    </p>
+    <p>
+      Durant l'année, nous organisons plusieurs événements à thème, tels qu'un
+      souper ou une dégustation au cours de laquelle tu es amené à découvrir les
+      bières et les autres spécialités de la région. Nous offrons ainsi
+      également l'occasion aux étudiants des autres Régionales de la Faculté de
+      découvrir notre beau folklore Borain. Au sein de la Boraine nous défendons
+      notamment un folklore qui est cher aux habitants de nos régions depuis le
+      XIVème siècle : le Doudou de Mons.
+    </p>
+  </section>
+</LayoutCercle>

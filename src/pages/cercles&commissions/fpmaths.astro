@@ -1,0 +1,100 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Links from "@components/Links.astro";
+
+import _FPMaths from "@images/commissions/fpmaths.jpg";
+
+import { Image } from "astro:assets";
+
+const commission = "FPMaths";
+
+const comite = [
+  { role: "Coordinateur", name: "Antoine Collet" },
+  { role: "Responsable (Mons)", name: "Evelyne Meurisse" },
+  { role: "Responsable (Charleroi)", name: "Valentin Nitelet" },
+  { role: "Responsable (Tournai)", name: "Colin Huart" },
+];
+const links: { name: string; type: string; url: string }[] | undefined = [
+  {
+    name: "Instagram",
+    type: "INSTAGRAM",
+    url: "https://www.instagram.com/fpmaths/",
+  },
+  {
+    name: "Facebook",
+    type: "FACEBOOK",
+    url: "https://www.facebook.com/FPMaths",
+  },
+  {
+    name: "fpmaths@gmail.com",
+    type: "EMAIL",
+    url: "mailto:fpmaths@gmail.com",
+  },
+  {
+    name: "Linktree",
+    type: "LINKTREE",
+    url: "https://linktr.ee/fpmaths",
+  },
+];
+---
+
+<Layout title={commission}>
+  <main class="container mt-4 space-y-6" transition:animate="slide">
+    <div class="h-64 w-full overflow-hidden rounded-2xl">
+      <Image
+        class="-z-10 h-full w-full object-cover"
+        src={_FPMaths}
+        alt={commission}
+        quality={100}
+        format="webp"
+      />
+    </div>
+    <div class="mx-auto max-w-5xl space-y-6">
+      <h1 class="text-5xl font-semibold">{commission}</h1>
+      <section class="space-y-2 text-justify">
+        <h2 class="text-2xl font-medium">Description</h2>
+        <p>
+          Des cours de mathématiques, <strong
+            >organisés par des étudiants de Master Polytech Mons</strong
+          >, abordent l'ensemble des bases mathématiques requises aux études
+          d'Ingénieur civil. Vous pourrez <strong>évoluer à votre rythme</strong
+          > en résolvant des exercices de différents niveaux, des plus simples
+          aux plus compliqués.
+        </p>
+        <p>
+          Les séances se donnent tout au long de l'année académique, <strong
+            >le samedi matin à Mons, à Charleroi et à Tournai</strong
+          >. <strong>Une participation de 5 € est demandée par séance.</strong>
+        </p>
+        <p>
+          Chaque matinée est consacrée à une matière précise, ceci dans le but
+          de vous permettre d'approfondir vos connaissances. <strong
+            >Les rappels théoriques et l'encadrement convivial</strong
+          > assuré par les étudiants garantissent l'accessibilité à FPMaths
+          aussi bien pour les élèves de mathematiques 4h qui souhaitent se
+          mettre à niveau que pour ceux qui bénéficient de cours plus avancés et
+          souhaitent rafraîchir leurs connaissances. <strong
+            >Les séances sont independantes les unes des autres : il n'est pas
+            nécessaire de suivre l'entièreté du cycle</strong
+          >.
+        </p>
+      </section>
+      <section
+        class="mx-auto max-w-md rounded-lg border-r-4 border-blue-900 bg-white px-8 py-4 font-medium shadow-xl"
+      >
+        <h2 class="pb-4 text-center text-xl">Comité</h2>
+        <ul>
+          {
+            comite.map(({ role, name }) => (
+              <li>
+                {role ? <strong>{role} : </strong> : ""}
+                {name}
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+      {links && links[0] ? <Links links={links} /> : ""}
+    </div>
+  </main>
+</Layout>

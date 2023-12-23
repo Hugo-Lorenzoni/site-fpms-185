@@ -1,0 +1,116 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Links from "@components/Links.astro";
+
+import _Web from "@images/commissions/commission-web.jpg";
+
+import { Image } from "astro:assets";
+
+const commission = "Commission Web";
+
+const comite = [
+  { role: "", name: "Hugo Lorenzoni" },
+  { role: "", name: "Rémy Lempire" },
+  { role: "", name: "Christian Abgenda" },
+];
+const links: { name: string; type: string; url: string }[] | undefined = [];
+---
+
+<Layout title={commission}>
+  <main class="container mt-4 space-y-6" transition:animate="slide">
+    <div class="h-64 w-full overflow-hidden rounded-2xl">
+      <Image
+        class="-z-10 h-full w-full object-cover"
+        src={_Web}
+        alt={commission}
+        quality={100}
+        format="webp"
+      />
+    </div>
+    <div class="mx-auto max-w-5xl space-y-6">
+      <h1 class="text-5xl font-semibold">{commission}</h1>
+      <section class="space-y-2 text-justify">
+        <h2 class="text-2xl font-medium">Description</h2>
+        <p>
+          La Commission Web a pour but de gérer la plateforme Internet (plus
+          communément appelée site Fédé) qui est mise à disposition des
+          étudiants. Ce site est très utile pour les étudiants, et regorge de
+          diverses informations utiles à ceux-ci.
+        </p>
+        <p>
+          Cette commission est composée d'au minimum deux personnes qui sont
+          chargées par la Fédérale du maintien et du développement du site sur
+          lequel vous vous trouvez actuellement.
+        </p>
+        <h2 class="text-2xl font-medium">Historique</h2>
+        <p>
+          En mai 2003, la Fédération des Etudiants a décidé de se doter d'un
+          site internet aux objectifs multiples mais visant essentiellement à
+          faire la promotion de ses cercles et de leurs activités. Au fur et à
+          mesure du temps, les besoins du site ont été de plus en plus nombreux.
+          Un exemple fut la gestion avancée des utilisateurs et des groupes
+          d'utilisateurs.
+        </p>
+        <p>
+          En 2006, la Commission Web a décidé de réécrire l'entièreté du site,
+          pour une meilleure prise en charge de toutes les fonctionnalités.
+          Cette réécriture fut l'occasion de remodeler le site graphiquement et
+          de prendre en charge de nouveaux standards. Le site est désormais
+          valide CSS 2.1 et XHTML 1.0. Ces améliorations permettront des
+          changements ultérieurs plus faciles, ainsi qu'une gestion plus aisée.
+          Le site est désormais ce que l'on peut appeler un "site Web 2.0". En
+          effet, les dernières technologies du Web telles que AJAX ont été
+          implémentées.
+        </p>
+        <p>
+          En 2008, la Commission Web a souhaité faire profiter le site Fédé de
+          l'expérience qu'elle a acquis durant ses deux mandats consécutifs. Si
+          le changement de la charte graphique est l'élément le plus marquant
+          avec une nouvelle disposition du contenu, l'ajout de bannières afin de
+          dynamiser l'ensemble et la possibilité de choisir un thème de
+          couleurs, l'essentiel du travail réalisé se cache derrière cette belle
+          façade.
+        </p>
+        <p>
+          En 2016, après une attaque informatique et par mesure de sécurité, le
+          site à été mis en maintenance prolongée. Il renaît sous une nouvelle
+          forme plus moderne en 2017 sous l'impulsion d'un projet mené par les
+          étudiants de troisième bachelier en informatique et gestion. Depuis,
+          aussi bien l'aspect technique qu'estétique a évolué.
+        </p>
+        <p>
+          Durant l'été 2019, une importante refonte graphique à été effectuée
+          afin de rendre le site plus harmonieux vis-à-vis des couleurs de la
+          faculté ainsi que de la Fédérale. De plus, l'aspect général à été
+          modernisé à l'aide des dernières mises à jour du framework Bootstrap.
+        </p>
+        <p>
+          En 2023, le site renaît encore une fois de ces cendres et la
+          Commission Web en profite pour se concenter sur le contenu du site
+          ainsi que la disponibilité de ce dernier. Ainsi les fonctionnalités du
+          site sont grandement simplifiées afin de rendre la maintenance plus
+          facile. Le site est désormais un site statique, ce qui permet de le
+          rendre plus rapide et plus sécurisé. De plus, le site est désormais
+          hébergé sur un serveur externe, ce qui permet une plus grande
+          fiabilité.
+        </p>
+      </section>
+      <section
+        class="mx-auto max-w-sm rounded-lg border-r-4 border-blue-900 bg-white px-8 py-4 font-medium shadow-xl"
+      >
+        <h2 class="pb-4 text-center text-xl">Comité</h2>
+        <ul>
+          {
+            comite.map(({ role, name }) => (
+              <li>
+                {role ? <strong>{role} : </strong> : ""}
+                {name}
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+      {links && links[0] ? <Links links={links} /> : ""}
+    </div>
+  </main>
+</Layout>

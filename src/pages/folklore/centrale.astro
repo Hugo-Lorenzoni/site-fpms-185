@@ -1,0 +1,75 @@
+---
+import LayoutCercle from "@layouts/LayoutCercle.astro";
+
+import _Centrale from "@images/régionales/centrale.jpg";
+import imageComite from "@images/comités/centrale.jpg";
+
+const cercle = "La Centrale";
+
+const comite = [
+  { role: "Président", name: "Maxime Van Elewyck" },
+  { role: "Vice-président", name: "Liam Penninckx" },
+  { role: "Trésorière", name: "Juliette van Der Vleugel" },
+  { role: "Secrétaire", name: "Adrien Renard" },
+  { role: "DRI", name: "Emilie Bernaert" },
+];
+
+const links: { name: string; type: string; url: string }[] | undefined = [];
+---
+
+<LayoutCercle
+  cercle={cercle}
+  imageCercle={_Centrale}
+  comite={comite}
+  imageComite={imageComite}
+  links={links}
+>
+  <section class="space-y-2 text-justify">
+    <h2 class="text-2xl font-medium">Description</h2>
+    <p>
+      Bienvenue dans la région de la Centrale, un joyau au cœur de la Belgique
+      qui sait se démarquer malgré sa modestie en taille. Ce qui nous rend si
+      spéciaux, c'est notre folklore exceptionnel, qui accompagne chacune de nos
+      activités au son envoûtant des tambours et des trompettes. Notre orchestre
+      de rondeaux, composé d'étudiants et d'anciens, est la fierté de notre
+      région.
+    </p>
+    <p>
+      Ici, nous rassemblons les jeunes venus de Binche à Soignies en passant par
+      La Louvière et les communes aux alentours. Mais au-delà de nos origines
+      géographiques, nous formons avant tout une grande famille, unie par des
+      liens indéfectibles. Chaque année, des comités débordant d'initiatives
+      s'efforcent d'organiser des activités mémorables en respectant notre riche
+      héritage culturel.
+    </p>
+    <p>
+      Nos soirées sont légendaires, au point de faire rougir de jalousie les
+      fêtes les plus renommées. Plusieurs fois par an, nous vous invitons à des
+      dégustations de bières typiques de notre région, l'occasion idéale pour
+      les étudiants de découvrir ou d'approfondir leur connaissance des
+      brasseries et des bières emblématiques telles que la Binchoise, la
+      Saint-Feuillen, la Bonne-Espérance, la Barbâr, l'Embuscade ou bien encore
+      la Bel'Chic.
+    </p>
+    <p>
+      Le jour de la Saint-Nicolas, patron des étudiants, personne ne peut
+      résister à l'invitation pour prendre l'apéro chez nous. Le traditionnel
+      "Mouchon" réchauffe les cœurs avant de défier le vent et la pluie aux
+      côtés du grand cortège estudiantin qui parcourt la ville.
+    </p>
+    <p>
+      En apothéose de l'année, nous affrétons chaque année un car pour vous
+      emmener au légendaire Carnaval de Binche, point d'orgue des festivités de
+      la région. Nous y réservons un local pour que tous nos membres puissent se
+      réunir autour d'une bonne bière, en célébrant cette tradition ancestrale.
+    </p>
+    <p>
+      Si vous êtes un habitant de la région, musicien au tambour, à la
+      clarinette ou au trombone, amateur de danse aux rythmes des Gilles, et si
+      vous avez soif de joie et d'amusement, alors la Centrale est votre
+      destinée. Rejoignez-nous, nous vous accueillerons à bras ouverts dans
+      cette grande famille centrée sur l'amour de notre région et de ses
+      traditions uniques.
+    </p>
+  </section>
+</LayoutCercle>

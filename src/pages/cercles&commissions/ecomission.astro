@@ -1,0 +1,93 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Links from "@components/Links.astro";
+
+import _CommHisto from "@images/commissions/ecomission.jpg";
+
+import { Image } from "astro:assets";
+
+const commission = "Écomission";
+
+const comite = [
+  { role: "", name: "Angèle Maiorca" },
+  { role: "", name: "Rodrigue Deghorain" },
+  { role: "", name: "Alice Legrain" },
+];
+const links: { name: string; type: string; url: string }[] | undefined = [
+  {
+    name: "Instagram",
+    type: "INSTAGRAM",
+    url: "https://www.instagram.com/ecomission185/",
+  },
+];
+---
+
+<Layout title={commission}>
+  <main class="container mt-4 space-y-6" transition:animate="slide">
+    <div class="h-64 w-full overflow-hidden rounded-2xl">
+      <Image
+        class="-z-10 h-full w-full object-cover"
+        src={_CommHisto}
+        alt={commission}
+        quality={100}
+        format="webp"
+      />
+    </div>
+    <div class="mx-auto max-w-5xl space-y-6">
+      <h1 class="text-5xl font-semibold">{commission}</h1>
+      <section class="space-y-2 text-justify">
+        <h2 class="text-2xl font-medium">Description</h2>
+        <p>
+          Comme l'explique les sciences sociales aujourd'hui : « La transition
+          écologique est indissociable d'une transformation sociale qui place au
+          centre le principe de solidarité. Nous ne sommes pas des individus
+          juxtaposés et poursuivant chacun l'objectif de réussir sa vie sans se
+          préoccuper de son voisin. S'il faut préserver l'acquis moderne
+          d'autonomie individuelle, celle-ci doit être pensée en articulation
+          avec les relations concrètes que nous entretenons avec toutes les
+          composantes du monde, humain et non humain. »
+        </p>
+        <p>
+          Cette idée, le Cercle de la Faculté Polytechnique de Mons l'a bien
+          comprise. C'est pourquoi la récente commission écologique regroupe des
+          étudiants soucieux du développement coopératif de l'idée écologique.
+          Des projets renouvelés annuellement sont pensés par qui décide de s'y
+          joindre. Ceux-ci amènent la relation sociale au centre du changement.
+          Les lieux d'action concernent la cité Houzeau, lieu de résidence
+          principale historiquement lié aux étudiants de notre faculté, mais
+          cela n'empêche pas l'expansion de projets plus ambitieux à l'échelle
+          de toutes les résidences de l'UMONS. Le public des actions sont certes
+          les habitants de la cité, lieu de création sociale, mais également
+          tous les étudiants qui gravitent autour de ce lieu de passage et des
+          lieux universitaires. Ainsi, tendre à la sensibilisation des jeunes
+          par des projets différentes portées comme par exemple : la
+          sensibilisation à la consommation durable à l'aide de kits préparés en
+          collaboration avec les commerces locaux ou encore le tri sélectif des
+          déchets avec la création de poubelles adaptées à la vie en kot font
+          partis d'actions menées par notre « écomission ».
+        </p>
+        <p>
+          Si tu as envie de te documenter au quotidien et d'être tenu au courant
+          des actualités de la planète préférée de tes planètes préférées on
+          t'invite à nous suivre sur Instagram !
+        </p>
+      </section>
+      <section
+        class="mx-auto max-w-sm rounded-lg border-r-4 border-blue-900 bg-white px-8 py-4 font-medium shadow-xl"
+      >
+        <h2 class="pb-4 text-center text-xl">Comité</h2>
+        <ul>
+          {
+            comite.map(({ role, name }) => (
+              <li>
+                {role ? <strong>{role} : </strong> : ""}
+                {name}
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+      {links && links[0] ? <Links links={links} /> : ""}
+    </div>
+  </main>
+</Layout>

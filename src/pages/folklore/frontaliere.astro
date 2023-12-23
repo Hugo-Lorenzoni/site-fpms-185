@@ -1,0 +1,74 @@
+---
+import LayoutCercle from "@layouts/LayoutCercle.astro";
+
+import _Frontalière from "@images/régionales/frontaliere.jpg";
+import imageComite from "@images/comités/frontaliere.jpg";
+
+const cercle = "La Frontalière";
+
+const comite = [
+  { role: "Présidente", name: "Lucie Lebrun" },
+  { role: "Vice-président", name: "Antonin Provost" },
+  { role: "Trésorier", name: "Simon Chevalier" },
+  { role: "Secrétaire", name: "Nolan Hantson" },
+  { role: "DRI-R", name: "Mathys Rogge" },
+];
+
+const links: { name: string; type: string; url: string }[] | undefined = [];
+---
+
+<LayoutCercle
+  cercle={cercle}
+  imageCercle={_Frontalière}
+  comite={comite}
+  imageComite={imageComite}
+  links={links}
+>
+  <section class="space-y-2 text-justify">
+    <h2 class="text-2xl font-medium">Description</h2>
+    <p>
+      La Frontalière est la Régionale qui regroupe les étudiants venant de la
+      région d'Ath, de Tournai et de Mouscron, pour citer les trois villes
+      principales. Evidemment, la Frontalière étant une Régionale, nous
+      accueillons aussi les étudiants venant de Chièvres, Basècles, Péruwelz,
+      Leuze et également de Flandre et de pays étrangers.
+    </p>
+    <p>
+      Afin de pouvoir faire connaissance, d'un côté avec tes compagnons de route
+      et d'un autre avec les étudiants plus âgés, l'occasion t'est donnée de
+      participer aux activités d'accueil (la Bleusaille) en début d'année.
+      Pendant cette période, nous te permettons de découvrir le folklore de
+      notre Régionale, au travers des chants et des histoires qu'il conte, mais
+      aussi plus globalement des villes qui composent notre Régionale. Au début
+      de la Bleusaille, un.e étudiant.e plus âgé.e deviendra ton Parrain ou ta
+      Marraine. En général, il sera de la même Régionale que toi ! Il ou elle te
+      guidera ainsi tout au long de tes études grâce à ses expériences
+      personnelles et à son vécu. Tu te feras également des amis qui proviennent
+      de ta région, mais aussi des autres Régionales et que tu garderas tout au
+      long de ton parcours au sein de la Faculté et même après !
+    </p>
+    <p>
+      Durant l'année, nous organisons diverses activités : notre souper
+      moules-frites te permettra de faire plus ample connaissance aussi bien
+      avec les personnes qui t'auront entouré pendant toute la période d'accueil
+      qu'avec d'autres personnes, étudiants ou ingénieurs diplômés. Nous
+      organisons aussi la traditionnelle dégustation au cours de laquelle tu
+      pourras goûter différentes bières qui sont brassées dans le pays
+      Frontalier : Bush, Moinette, … ainsi que notre star régionale : la Paix
+      Dieu, qui n'est brassée que les soirs de pleine lune.
+    </p>
+    <p>
+      Au début du deuxième quadrimestre, le jour du Mercredi des Cendres, qui
+      est le lendemain du Carnaval de Binche (Mardi Gras), nous nous rendons en
+      bus dans notre terre frontalière adorée afin de pratiquer un sport
+      typiquement chièvrois, le Crossage à l'tonne.
+    </p>
+    <p>
+      Et pour finir en beauté, après le blocus de Pâques, nous organisons un
+      splendide barbecue durant lequel tu pourras profiter du beau temps et des
+      amis que tu auras rencontrés tout au long de l'année avant de te lancer
+      dans la session de juin. Nous espérons te voir très bientôt à la
+      Frontalière !
+    </p>
+  </section>
+</LayoutCercle>

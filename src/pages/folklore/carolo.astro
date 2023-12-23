@@ -1,0 +1,86 @@
+---
+import LayoutCercle from "@layouts/LayoutCercle.astro";
+
+import _Carolo from "@images/régionales/carolo.jpg";
+import imageComite from "@images/comités/carolo.jpg";
+
+const cercle = "La Carolo";
+
+const comite = [
+  { role: "Présidente", name: "Zoé Bon" },
+  { role: "Vice-présidente", name: "Chiara Lété" },
+  { role: "Trésorier", name: "Alexis Michel" },
+  { role: "Secrétaire", name: "Hugo Tormen" },
+  { role: "DRI", name: "Pierre Brusselmans" },
+];
+
+const links: { name: string; type: string; url: string }[] | undefined = [];
+---
+
+<LayoutCercle
+  cercle={cercle}
+  imageCercle={_Carolo}
+  comite={comite}
+  imageComite={imageComite}
+  links={links}
+>
+  <section class="space-y-2 text-justify">
+    <h2 class="text-2xl font-medium">Description</h2>
+    <p>
+      Au cœur de la Faculté Polytechnique de Mons, un groupe étudiant unique en
+      son genre, la Régionale Carolo, se consacre à créer des liens entre les
+      étudiants originaires de la région de Charleroi. Elle favorise ainsi un
+      sentiment d'appartenance au sein de la Faculté Polytechnique. Cette
+      Régionale a surtout comme objectif de faire briller la culture du "Pays
+      Noir" à travers une série d'activités soigneusement organisées.
+    </p>
+    <p>
+      Parmi les activités organisées tout au long de l'année, nous avons le
+      plaisir de proposer une variété d'expériences. Celles-ci comprennent une
+      dégustation de nos spécialités locales ainsi qu'un souper convivial qui
+      rassemble les natifs de Charleroi et de ses environs ainsi que les curieux
+      désireux de plonger dans notre culture. De plus, des visites captivantes
+      des sites emblématiques de la région sont au programme, et de nombreuses
+      soirées à thème sont orchestrées en collaboration avec d'autres Régionales
+      Carolo de Belgique. Pour les intrépides, il est même possible de relever
+      le défi ultime en participant au célèbre "Permis de Boire Carolo", une
+      épreuve des plus complexes qui saura mettre à l'épreuve votre endurance.
+    </p>
+    <p>
+      La Régionale Carolo FPMs ne se limite pas à la simple organisation
+      d'événements, elle s'engage également activement dans la transmission des
+      valeurs et des traditions de la région. Le comité est toujours disponible
+      pour tous ceux qui souhaitent approfondir leur connaissance de l'Histoire,
+      des coutumes et de l'évolution du Pays Noir. De plus, le comité ne manque
+      jamais l'occasion de partager des anecdotes moins connues sur sa région
+      d'origine et est toujours avide d'en apprendre davantage sur son propre
+      territoire.
+    </p>
+    <p>
+      Outre son rôle de préservation culturelle, la Régionale Carolo FPMs met
+      l'accent sur la création de liens solides entre les étudiants lors des
+      activités d'intégration estudiantine. Des activités de groupe favorisent
+      les échanges et les amitiés au-delà des frontières académiques. Cette
+      Régionale prône un sentiment de fierté pour leurs racines communes.
+    </p>
+    <p>
+      La Régionale Carolo FPMs ne limite pas son influence à la Faculté
+      Polytechnique. Grâce à ses activités ouvertes à tous les étudiants, elle
+      contribue à sensibiliser l'ensemble de la communauté universitaire à la
+      richesse culturelle de Charleroi. Cela permet également de tisser des
+      liens interfacultaires, d'ouvrir des discussions autour de la diversité
+      culturelle, et de renforcer les connexions avec les autres Régionales
+      Carolo de Belgique. Cette collaboration étendue favorise un échange
+      dynamique d'idées, de traditions et d'expériences, créant ainsi un réseau
+      culturel interuniversitaire qui transcende les frontières académiques.
+    </p>
+    <p>
+      En conclusion, la Régionale Carolo FPMs, composée de cinq étudiants
+      passionnés, a su transcender les frontières géographiques pour créer un
+      espace dédié à la découverte et à la célébration de la culture de
+      Charleroi en proposant des activités variées tout au long de l'année, en
+      renforçant les liens interpersonnels et en favorisant un sentiment
+      d'appartenance.
+    </p>
+  </section>
+</LayoutCercle>

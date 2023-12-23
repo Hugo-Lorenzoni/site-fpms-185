@@ -1,3 +1,9 @@
+---
+import Facebook from "@icons/Facebook.astro";
+import Instagram from "@icons/Instagram.astro";
+import Mail from "@icons/Mail.astro";
+---
+
 <footer
   class="z-10 mt-6 bg-blue-900 text-sm text-white"
   transition:animate="none"
@@ -13,21 +19,7 @@
             class="flex w-min items-center gap-2 underline duration-150 hover:translate-x-2 hover:opacity-80"
             href="https://www.instagram.com/fede_fpms/"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-instagram"
-              ><rect width="20" height="20" x="2" y="2" rx="5" ry="5"
-              ></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
-              ></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg
-            >
+            <Instagram />
              Instagram
           </a>
         </li>
@@ -36,21 +28,7 @@
             class="flex w-min items-center gap-2 underline duration-150 hover:translate-x-2 hover:opacity-80"
             href="https://www.facebook.com/fede.fpms"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-facebook"
-              ><path
-                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
-              ></path></svg
-            >
+            <Facebook />
              Facebook
           </a>
         </li>
@@ -59,20 +37,7 @@
             class="flex w-min items-center gap-2 underline duration-150 hover:translate-x-2 hover:opacity-80"
             href="mailto:fede.polytech@umons.ac.be"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-mail"
-              ><rect width="20" height="16" x="2" y="4" rx="2"></rect><path
-                d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg
-            >
+            <Mail />
              fede.polytech@umons.ac.be
           </a>
         </li>
@@ -83,8 +48,8 @@
       <h4 class="mb-4 mt-0 font-semibold">Commission Web 185</h4>
       <ul class="flex flex-col gap-2">
         <li>Hugo Lorenzoni</li>
-        <li>Christian Abgenda</li>
         <li>Rémy Lempire</li>
+        <li>Christian Abgenda</li>
       </ul>
     </div>
     <div class="h-[2px] rounded-full bg-white md:hidden"></div>

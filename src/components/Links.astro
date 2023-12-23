@@ -7,6 +7,7 @@ import Mail from "@icons/Mail.astro";
 import Spotify from "@icons/Spotify.astro";
 import Website from "@icons/Website.astro";
 import Tiktok from "@icons/Tiktok.astro";
+import Linktree from "@icons/Linktree.astro";
 
 interface Props {
   links: {
@@ -49,6 +50,7 @@ const { links } = Astro.props;
                 {link.type === "EMAIL" && <Mail />}
                 {link.type === "SPOTIFY" && <Spotify />}
                 {link.type === "TIKTOK" && <Tiktok />}
+                {link.type === "LINKTREE" && <Linktree />}
                 {link.name}
               </a>
             </li>
