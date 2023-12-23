@@ -1,0 +1,83 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+import _CAP from "@images/cercles/mons-mines.jpg";
+import Comite from "@images/comités/mons-mines.jpg";
+
+const cercle = "Mons-Mines";
+
+const president = "Philippe Asvestaris";
+const redacteur_en_chef = "Arno Panarisi";
+const tresorier = "Romane Sogalow";
+const secretaire = "Léa Robinet";
+---
+
+<Layout title={cercle}>
+  <main class="container mt-4 space-y-6" transition:animate="slide">
+    <div class="h-64 w-full overflow-hidden rounded-2xl">
+      <Image
+        class="-z-10 h-full w-full object-cover"
+        src={_CAP}
+        alt={cercle}
+        quality={100}
+        format="webp"
+      />
+    </div>
+    <div class="mx-auto max-w-5xl space-y-6">
+      <h1 class="text-5xl font-semibold">{cercle}</h1>
+      <section class="space-y-2 text-justify">
+        <h2 class="text-2xl font-medium">Description</h2>
+        <p class="text-center italic">
+          « Coucou, ici le Mons-Mines. Votre seule et unique source
+          d'information sur la vie des étudiants de Mons. Qui a dit quoi ? Qui a
+          fait quoi ? Que s'est-il passé dans cette bonne ville de Mons ? Ça ce
+          sont des secrets que vous retrouverez uniquement dans ce journal de la
+          Faculté. Bisous bisous, le Mons-Mines. »
+        </p>
+        <p>
+          Le Mons-Mines, ce fabuleux Cercle qui vous propose quatre journaux
+          satiriques par an reprenant articles, anecdotes, … tout ce qu'il s'est
+          passé dans notre Faculté et que vous avez sans doute raté. Ce journal
+          est entièrement rédigé, conçu et géré par des étudiants qui perceront
+          à jour vos plus grands secrets. Ce précieux trésor attire à sa sortie
+          des foules d'étudiants désireux de connaître ce que les oreilles
+          baladeuses du Mons-Mines ont entendu. On peut faire un petit tour dans
+          les entendus pour voir qui a dit quoi sur qui ou on peut aussi jeter
+          un coup d'œil à l'indétrônable Tournez-Manège pour découvrir tous les
+          potins de la Faculté. Bien d'autres choses sont encore à découvrir
+          dans cette merveille de papier. Si ta plume te démange, nous serons
+          ravis que tu nous envoies un de tes articles, des potins, des
+          entendus, … et ainsi contribuer à la confection de ce magnifique
+          journal !
+        </p>
+      </section>
+      <section
+        class="rounded-lg border-r-4 border-blue-900 bg-white font-medium shadow-xl sm:flex"
+      >
+        <div class="aspect-video flex-1 overflow-hidden">
+          <Image
+            class="h-full w-full rounded-lg object-cover"
+            src={Comite}
+            alt="Comité de la Fédération des étudiants de la Faculté Polytechnique de Mons (FPMs)"
+            quality={30}
+            format="webp"
+          />
+        </div>
+        <div
+          class="inline-flex w-full flex-col justify-center px-6 py-6 sm:w-auto"
+        >
+          <h2 class="mx-auto max-w-fit pb-4 text-xl">Comité</h2>
+          <ul>
+            <li><strong>Président :</strong>{" "}{president}</li>
+            <li>
+              <strong>Rédacteur en chef :</strong>{" "}{redacteur_en_chef}
+            </li>
+            <li><strong>Trésorière :</strong>{" "}{tresorier}</li>
+            <li><strong>Secrétaire :</strong>{" "}{secretaire}</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+</Layout>

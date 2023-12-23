@@ -1,0 +1,111 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+import _Mutu from "@images/cercles/mutu.jpg";
+import Comite from "@images/comités/mutu.jpg";
+
+const cercle = "La Mutuelle d'Édition";
+
+const president = "Louis Roost";
+const tresorier = "Louis Pluquet";
+const secretaire = "Hugo Dantinne";
+---
+
+<Layout title={cercle}>
+  <main class="container mt-4 space-y-6" transition:animate="slide">
+    <div class="h-64 w-full overflow-hidden rounded-2xl">
+      <Image
+        class="-z-10 h-full w-full object-cover"
+        src={_Mutu}
+        alt={cercle}
+        quality={100}
+        format="webp"
+      />
+    </div>
+    <div class="mx-auto max-w-5xl space-y-6">
+      <h1 class="text-5xl font-semibold">{cercle}</h1>
+      <section class="space-y-2 text-justify">
+        <h2 class="text-2xl font-medium">Description</h2>
+        <p>
+          La Mutuelle des Etudiants de la Faculté Polytechnique de Mons (plus
+          communément appelée la Mutu) est un Cercle géré par les étudiants pour
+          les étudiants.
+        </p>
+        <p>
+          La Mutu possède et gère un local situé à l'arrière de la Cité Houzeau
+          (Rue de la Tannerie, N°12).
+        </p>
+        <p>
+          Ce local abrite du matériel d'impression professionnel qui permet aux
+          étudiants d'imprimer et de relier tout ce qu'ils souhaitent aux
+          meilleurs prix. Des supports de cours divers aux synthèses en passant
+          par les stickers, la Mutu et son comité armé d'une équipe d'ouvreurs
+          se feront le plaisir de te servir pendant les heures d'ouvertures en
+          fin de journée et sur le temps de midi tout au long de la semaine et
+          ce dans une bonne ambiance ! Si tu n'es pas disponible sur les heures
+          d'ouverture, il est possible de faire une commande par mail ou par
+          Messenger et de venir la retirer au moment qui te convient le mieux.
+          La Mutu collabore aussi étroitement avec les Presses Universitaires
+          Montoises (PUM's) et propose ainsi également la vente de syllabi
+          Polytech.
+        </p>
+        <p>
+          Mais ce n'est pas tout ! La Mutu possède aussi une salle d'étude au
+          rez-de-chaussée de son local proposant aux étudiants Polytech un
+          endroit calme à deux pas des kots de la Cité Houzeau où étudier et
+          collaborer entre camarades avec des horaires d'accès souples.
+        </p>
+      </section>
+      <section
+        class="rounded-lg border-r-4 border-blue-900 bg-white font-medium shadow-xl sm:flex"
+      >
+        <div class="aspect-video flex-1 overflow-hidden">
+          <Image
+            class="h-full w-full rounded-lg object-cover"
+            src={Comite}
+            alt="Comité de la Fédération des étudiants de la Faculté Polytechnique de Mons (FPMs)"
+            quality={30}
+            format="webp"
+          />
+        </div>
+        <div
+          class="inline-flex w-full flex-col justify-center px-6 py-6 sm:w-auto"
+        >
+          <h2 class="mx-auto max-w-fit pb-4 text-xl">Comité</h2>
+          <ul>
+            <li><strong>Président :</strong>{" "}{president}</li>
+            <li><strong>Trésorier :</strong>{" "}{tresorier}</li>
+            <li><strong>Secrétaire :</strong>{" "}{secretaire}</li>
+          </ul>
+        </div>
+      </section>
+      <section class="space-y-2 font-medium">
+        <h2 class="text-2xl">Réseaux sociaux</h2>
+        <ul class="space-y-1 text-blue-900">
+          <li>
+            <a
+              class="flex w-min gap-2 underline duration-150 hover:translate-x-2 hover:opacity-80"
+              href="mailto:mutuelle@umons.ac.be"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-mail"
+                ><rect width="20" height="16" x="2" y="4" rx="2"></rect><path
+                  d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg
+              >
+               mutuelle@umons.ac.be</a
+            >
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+</Layout>

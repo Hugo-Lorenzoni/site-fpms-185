@@ -1,0 +1,106 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+import _CAP from "@images/cercles/cap.jpg";
+import Comite from "@images/comités/cap.jpg";
+
+const cercle = "Centrale d'Achats Polytech";
+
+const president = "Florian Druart";
+const tresorier = "Kateline Malray";
+---
+
+<Layout title={cercle}>
+  <main class="container mt-4 space-y-6" transition:animate="slide">
+    <div class="h-64 w-full overflow-hidden rounded-2xl">
+      <Image
+        class="-z-10 h-full w-full object-cover"
+        src={_CAP}
+        alt={cercle}
+        quality={100}
+        format="webp"
+      />
+    </div>
+    <div class="mx-auto max-w-5xl space-y-6">
+      <h1 class="text-5xl font-semibold">{cercle}</h1>
+      <section class="space-y-2 text-justify">
+        <h2 class="text-2xl font-medium">Description</h2>
+        <p>
+          La Centrale d'Achat Polytechnique ou CAP pour les intimes est un des
+          12 Cercles Fédérés de notre Faculté. Ce dernier dispose d'un local
+          situé à la Cité Houzeau juste à côté du Bar Polytech. Ce local est
+          ouvert à tous du lundi au vendredi de 12h30 à 13h15. C'est un lieu de
+          convivialité mais pas que …
+        </p>
+        <p>
+          En effet, la CAP a plusieurs missions toutes liées à la mise à
+          disposition de services pour la communauté estudiantine. Tout d'abord,
+          une machine à café ainsi que des glaces vous y sont proposées pour un
+          prix des plus démocratique. De plus, la CAP vend du matériel utile à
+          votre parcours universitaire tel que les fameux tabliers de chimie
+          mais aussi des fournitures (crayons, bics, équerres, …). L'attirail du
+          parfait baptisé est également disponible au sein de la CAP : pennes,
+          tablars vierges et insignes.
+        </p>
+        <p>
+          Nous ne le répéterons jamais assez mais ce Cercle comme d'autres est
+          au service de tous. Les canapés de notre local seront ravis de voir
+          tout le monde venir s'y prélasser. On espère donc vous y retrouver
+          rapidement ! Si vous avez des questions ou tout simplement besoin de
+          renseignements, n'hésitez pas à passer sur les temps de midi. On sera
+          ravis de vous aider.
+        </p>
+        <p><i> PS : A la CAP, il fait bon vivre !</i></p>
+      </section>
+      <section
+        class="rounded-lg border-r-4 border-blue-900 bg-white font-medium shadow-xl sm:flex"
+      >
+        <div class="aspect-video flex-1 overflow-hidden">
+          <Image
+            class="h-full w-full rounded-lg object-cover"
+            src={Comite}
+            alt="Comité de la Fédération des étudiants de la Faculté Polytechnique de Mons (FPMs)"
+            quality={30}
+            format="webp"
+          />
+        </div>
+        <div
+          class="inline-flex w-full flex-col justify-center px-6 py-6 sm:w-auto"
+        >
+          <h2 class="mx-auto max-w-fit pb-4 text-xl">Comité</h2>
+          <ul>
+            <li><strong>Président :</strong>{" "}{president}</li>
+            <li><strong>Trésorière :</strong>{" "}{tresorier}</li>
+          </ul>
+        </div>
+      </section>
+      <!-- <section class="space-y-2 font-medium">
+        <h2 class="text-2xl">Réseaux sociaux</h2>
+        <ul class="space-y-1 text-blue-900">
+          <li>
+            <a
+              class="flex w-min gap-2 underline duration-150 hover:translate-x-2 hover:opacity-80"
+              href="https://www.facebook.com/groups/14030439484/"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-facebook"
+                ><path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                ></path></svg
+              >Facebook</a
+            >
+          </li>
+        </ul>
+      </section> -->
+    </div>
+  </main>
+</Layout>

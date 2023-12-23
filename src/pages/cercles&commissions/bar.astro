@@ -1,0 +1,113 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+import _Bar from "@images/cercles/bar.jpg";
+import Comite from "@images/comités/bar.jpg";
+
+const cercle = "Cercle du Bar";
+
+const president = "Ugo Falcinelli";
+const tresorier = "Bruno Delhaye";
+const secretaire = "Bastien Francotte";
+---
+
+<Layout title={cercle}>
+  <main class="container mt-4 space-y-6" transition:animate="slide">
+    <div class="h-64 w-full overflow-hidden rounded-2xl">
+      <Image
+        class="-z-10 h-full w-full object-cover"
+        src={_Bar}
+        alt={cercle}
+        quality={100}
+        format="webp"
+      />
+    </div>
+    <div class="mx-auto max-w-5xl space-y-6">
+      <h1 class="text-5xl font-semibold">{cercle}</h1>
+      <section class="space-y-2 text-justify">
+        <h2 class="text-2xl font-medium">Description</h2>
+        <p>
+          Le Bar Polytech qu'est-ce que c'est ? C'est un lieu convivial où tous
+          les étudiants se retrouvent pour passer un bon moment entre amis,
+          jouer au kicker, déguster de délicieuses bières ou des sodas à des
+          prix démocratiques.Comme son nom l'indique, le Bar est géré et tenu
+          par les Barmans, des étudiants Polytech qui y travaillent bénévolement
+          afin de vous offrir le meilleur service possible tout en gardant le
+          Bar propre et rangé.
+        </p>
+        <p>
+          Le plus grand avantage du Bar Polytech ? La meilleure bière de
+          l'univers aka la Stella Artois y est servie au fût par les Barmans
+          selon les neuf étapes traditionnelles pour la modique somme de 0,90€.
+          Outre cela, plusieurs bières spéciales telles que la Paix Dieu, la
+          Tripel Karmeliet, la Chimay Bleue, la Leffe Blonde, la Duvel, la
+          Saint-Feuillien, …
+        </p>
+        <p>
+          Ces bières sont disponibles toute l'année au prix de 1,30€ la 25cl et
+          1,50€ la 33cl. Si l'alcool ne te convient pas, aucun problème, nous te
+          proposons également toute la gamme Pepsi à seulement 0,60€ ainsi que
+          la gamme Looza à 0,70€ et la gamme Lipton Ice Tea à 0,80€. Le Bar
+          possède également deux kickers, un jeu de fléchettes et des jeux de
+          cartes à disposition gratuitement.
+        </p>
+        <p>
+          Où trouver ce paradis sur Terre ? Le Bar Polytech est situé au 69
+          Boulevard Dolez, dans la Cité Houzeau à droite lorsque vous descendez
+          l'escalier et est ouvert à tous les étudiants. N'hésite donc plus et
+          viens boire un Looza !
+        </p>
+      </section>
+      <section
+        class="rounded-lg border-r-4 border-blue-900 bg-white font-medium shadow-xl sm:flex"
+      >
+        <div class="aspect-video flex-1 overflow-hidden">
+          <Image
+            class="h-full w-full rounded-lg object-cover"
+            src={Comite}
+            alt="Comité de la Fédération des étudiants de la Faculté Polytechnique de Mons (FPMs)"
+            quality={30}
+            format="webp"
+          />
+        </div>
+        <div
+          class="inline-flex w-full flex-col justify-center px-6 py-6 sm:w-auto"
+        >
+          <h2 class="mx-auto max-w-fit pb-4 text-xl">Comité</h2>
+          <ul>
+            <li><strong>Président :</strong>{" "}{president}</li>
+            <li><strong>Trésorier :</strong>{" "}{tresorier}</li>
+            <li><strong>Secrétaire :</strong>{" "}{secretaire}</li>
+          </ul>
+        </div>
+      </section>
+      <section class="space-y-2 font-medium">
+        <h2 class="text-2xl">Réseaux sociaux</h2>
+        <ul class="space-y-1 text-blue-900">
+          <li>
+            <a
+              class="flex w-min gap-2 underline duration-150 hover:translate-x-2 hover:opacity-80"
+              href="https://www.facebook.com/groups/14030439484/"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-facebook"
+                ><path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                ></path></svg
+              >Facebook</a
+            >
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+</Layout>
