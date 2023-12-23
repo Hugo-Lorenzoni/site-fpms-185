@@ -6,12 +6,13 @@ import _SDM from "@images/cercles/sdm.jpg";
 import Comite from "@images/comités/sdm.jpg";
 
 const cercle = "Cercle Sono-Danse-Musique";
-
-const president = "Joséphine Vincart";
-const tresorier = "Chloé Pierart";
-const delegue_sono = "Cyril De Marez";
-const delegue_danse = "Kateline Malray";
-const delegue_musique = "Mathis Lete";
+const comite = [
+  { poste: "Présidente", nom: "Joséphine Vincart" },
+  { poste: "Trésorière", nom: "Chloé Pierart" },
+  { poste: "Délégué sono", nom: "Cyril De Marez" },
+  { poste: "Déléguée danse", nom: "Kateline Malray" },
+  { poste: "Délégué musique", nom: "Mathis Lete" },
+];
 ---
 
 <Layout title={cercle}>
@@ -73,7 +74,7 @@ const delegue_musique = "Mathis Lete";
           <Image
             class="h-full w-full rounded-lg object-cover"
             src={Comite}
-            alt="Comité de la Fédération des étudiants de la Faculté Polytechnique de Mons (FPMs)"
+            alt=`Comité - ${cercle}`
             quality={30}
             format="webp"
           />
@@ -83,17 +84,13 @@ const delegue_musique = "Mathis Lete";
         >
           <h2 class="mx-auto max-w-fit pb-4 text-xl">Comité</h2>
           <ul>
-            <li><strong>Présidente :</strong>{" "}{president}</li>
-            <li><strong>Trésorière :</strong>{" "}{tresorier}</li>
-            <li>
-              <strong>Délégué sono :</strong>{" "}{delegue_sono}
-            </li>
-            <li>
-              <strong>Déléguée danse :</strong>{" "}{delegue_danse}
-            </li>
-            <li>
-              <strong>Délégué musique :</strong>{" "}{delegue_musique}
-            </li>
+            {
+              comite.map(({ poste, nom }) => (
+                <li>
+                  <strong>{poste} :</strong> {nom}
+                </li>
+              ))
+            }
           </ul>
         </div>
       </section>
