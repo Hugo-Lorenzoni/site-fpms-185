@@ -1,8 +1,11 @@
 ---
 import LayoutCercle from "@layouts/LayoutCercle.astro";
+import { Image } from "astro:assets";
 
 import _Q from "@images/cercles/q.jpg";
 import imageComite from "@images/comités/q.jpg";
+import _Bibli from "@images/locaux/bibli.jpg";
+import _LocalProjection from "@images/locaux/local-de-projection.jpg";
 
 const cercle = "Cercle Culturel - Q";
 
@@ -54,21 +57,47 @@ const links = [
   <section class="space-y-2 text-justify">
     <h2 class="text-2xl font-medium">Description</h2>
     <p>
-      Le Cercle Qulturel ou le Q s'occupe de proposer aux étudiants Polytech des
-      activités culturelles et ludiques ainsi que l'accès à deux locaux situés à
-      la Cité Houzeau, la Bibli et un local de projection.
+      Le Cercle Qulturel ou le Q s'occupe de proposer aux étudiants Polytech <strong
+        >des activités culturelles et ludiques</strong
+      > ainsi que l'accès à deux locaux situés à la Cité Houzeau, la Bibli et un
+      local de projection.
     </p>
-    <h3 class="font-medium underline">La Bibli :</h3>
+  </section>
+  <section class="space-y-2 text-justify">
+    <h3 class="text-2xl font-medium" id="bibli">La Bibli (au 11/12) :</h3>
+    <div class="float-right ml-4 h-48 w-1/3 pb-4">
+      <Image
+        class="h-full rounded-lg object-cover shadow-md"
+        src={_Bibli}
+        alt="BibliCité - 11/12"
+        quality={30}
+        format="webp"
+      />
+    </div>
     <p>
       La Bibli, située à l'inter-étage 11/12 de la Cité, est un endroit
       convivial où vous pouvez venir vous détendre après les cours. En effet, la
-      Bibli est ouverte généralement de 18h à 20h et vous propose au choix de la
-      lecture, des jeux de sociétés, une conversation sympa autour d'un verre.
-      Plus de 4000 BDs et moults jeux de sociétés vous attendent donc n'hésitez
-      pas à y passer ! Elle est également disponible sur demande au comité pour
-      des réunions dans un espace cosy.
+      Bibli est ouverte généralement de <strong>18h à 20h</strong> et vous
+      propose au choix de la lecture, des jeux de sociétés, une conversation
+      sympa autour d'un verre. Plus de <strong
+        >4000 BDs et moults jeux de sociétés</strong
+      > vous attendent donc n'hésitez pas à y passer ! Elle est également
+      disponible sur demande au comité pour des réunions dans un espace cosy.
     </p>
-    <h3 class="font-medium underline">Le local de projection (au 9/10) :</h3>
+  </section>
+  <section class="space-y-2 text-justify">
+    <h3 class="text-2xl font-medium" id="local de projection">
+      Le local de projection (au 9/10) :
+    </h3>
+    <div class="float-left mr-4 h-48 w-1/3 pb-4">
+      <Image
+        class="h-full rounded-lg object-cover shadow-md"
+        src={_LocalProjection}
+        alt="Local de projection - 9/10"
+        quality={30}
+        format="webp"
+      />
+    </div>
     <p>
       Le local de projection situé à l'inter-étage 9/10 (d'où son nom) vous
       permet de regarder films ou séries de votre choix avec vos amis jusqu'à
@@ -77,7 +106,9 @@ const links = [
       simplement de ranger le local quand vous avez fini. Le local est
       accessible exclusivement en semaine.
     </p>
-    <h3 class="font-medium underline">Voyage Q :</h3>
+  </section>
+  <section class="clear-both space-y-2 text-justify">
+    <h3 class="text-2xl font-medium">Voyage Q :</h3>
     <p>
       Chaque année, le Q organise un voyage de quelques jours dans une ville
       d'Europe durant un week-end du mois de novembre. Ce voyage est ouvert à
@@ -85,7 +116,9 @@ const links = [
       précédentes, les destinations étaient Munich, Hambourg, Vienne, Prague,
       ...
     </p>
-    <h3 class="font-medium underline">Autres activités :</h3>
+  </section>
+  <section class="space-y-2 text-justify">
+    <h3 class="text-2xl font-medium">Autres activités :</h3>
     <p>
       Durant l'année, nous proposons différentes activités comme par exemple des
       soirées jeux, des sorties au cinéma, des sorties culturelles, des soirées

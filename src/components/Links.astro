@@ -22,7 +22,7 @@ const { links } = Astro.props;
 
 <section class="space-y-2 font-medium">
   <h2 class="text-2xl">Réseaux sociaux</h2>
-  <ul class="space-y-1 text-blue-900">
+  <ul class="flex flex-wrap items-center gap-x-6 gap-y-2 text-blue-900">
     {
       links.map((link) => (
         <>
@@ -38,7 +38,7 @@ const { links } = Astro.props;
               </a>
             </li>
           ) : (
-            <li>
+            <li class="flex">
               <a
                 class="inline-flex gap-2 underline duration-150 hover:translate-x-2 hover:opacity-80"
                 href={link.url}

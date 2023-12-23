@@ -1,8 +1,10 @@
 ---
 import LayoutCercle from "@layouts/LayoutCercle.astro";
+import { Image } from "astro:assets";
 
 import _Mutu from "@images/cercles/mutu.jpg";
 import imageComite from "@images/comités/mutu.jpg";
+import _LocalMutu from "@images/locaux/local-mutu.jpg";
 
 const cercle = "La Mutuelle d'Édition";
 
@@ -44,23 +46,38 @@ const links = [
       communément appelée la Mutu) est un Cercle géré par les étudiants pour les
       étudiants.
     </p>
+  </section>
+  <section class="space-y-2 text-justify" id="local">
+    <h3 class="text-2xl font-medium">Local Mutu</h3>
+    <div class="float-right mb-4 ml-4 h-48 w-1/2">
+      <Image
+        class="h-full rounded-lg object-cover shadow-md"
+        src={_LocalMutu}
+        alt="Local de projection - 9/10"
+        quality={30}
+        format="webp"
+      />
+    </div>
     <p>
       La Mutu possède et gère un local situé à l'arrière de la Cité Houzeau (Rue
       de la Tannerie, N°12).
     </p>
+
     <p>
-      Ce local abrite du matériel d'impression professionnel qui permet aux
-      étudiants d'imprimer et de relier tout ce qu'ils souhaitent aux meilleurs
-      prix. Des supports de cours divers aux synthèses en passant par les
-      stickers, la Mutu et son comité armé d'une équipe d'ouvreurs se feront le
-      plaisir de te servir pendant les heures d'ouvertures en fin de journée et
-      sur le temps de midi tout au long de la semaine et ce dans une bonne
-      ambiance ! Si tu n'es pas disponible sur les heures d'ouverture, il est
-      possible de faire une commande par mail ou par Messenger et de venir la
-      retirer au moment qui te convient le mieux. La Mutu collabore aussi
-      étroitement avec les Presses Universitaires Montoises (PUM's) et propose
-      ainsi également la vente de syllabi Polytech.
+      Ce local abrite du <strong
+        >matériel d'impression professionnel qui permet aux étudiants d'imprimer
+        et de relier tout ce qu'ils souhaitent aux meilleurs prix</strong
+      >. Des supports de cours divers aux synthèses en passant par les stickers,
+      la Mutu et son comité armé d'une équipe d'ouvreurs se feront le plaisir de
+      te servir pendant les heures d'ouvertures en fin de journée et sur le
+      temps de midi tout au long de la semaine et ce dans une bonne ambiance !
+      Si tu n'es pas disponible sur les heures d'ouverture, il est possible de
+      faire une commande par mail ou par Messenger et de venir la retirer au
+      moment qui te convient le mieux. La Mutu collabore aussi étroitement avec
+      les Presses Universitaires Montoises (PUM's) et propose ainsi également la
+      vente de syllabi Polytech.
     </p>
+
     <p>
       Mais ce n'est pas tout ! La Mutu possède aussi une salle d'étude au
       rez-de-chaussée de son local proposant aux étudiants Polytech un endroit

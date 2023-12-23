@@ -3,6 +3,9 @@ import LayoutCercle from "@layouts/LayoutCercle.astro";
 
 import _Magellan from "@images/cercles/magellan.jpg";
 import imageComite from "@images/comités/magellan.jpg";
+import _500 from "@images/locaux/500.jpg";
+
+import { Image } from "astro:assets";
 
 const cercle = "Cercle Magellan";
 
@@ -52,32 +55,55 @@ const links = [
   <section class="space-y-2 text-justify">
     <h2 class="text-2xl font-medium">Description</h2>
     <p>
-      Le Cercle Magellan est le Cercle informatique de la Faculté Polytechnique
-      de Mons. Il est composé d'un groupe d'étudiants, appelés "Admins". Cette
-      fine équipe est passionnée par l'informatique et se regroupe régulièrement
-      pour jouer aux jeux vidéo ou pour réaliser des projets de solutions
-      informatiques, tels que des sites web ou de l'hébergement.
+      Le Cercle Magellan est <strong
+        >le Cercle informatique de la Faculté Polytechnique de Mons</strong
+      >. Il est composé d'un groupe d'étudiants, appelés <strong
+        >"Admins"</strong
+      >. Cette fine équipe est passionnée par l'informatique et se regroupe
+      régulièrement pour jouer aux jeux vidéo ou pour réaliser des projets de
+      solutions informatiques, tels que des sites web ou de l'hébergement.
     </p>
     <p>
-      Le Magellan est également chargé des réseaux Internet des Cités Houzeau et
-      Franeau, et sert de "HelpDesk" pour ces cités étudiantes.
+      Le Magellan est également chargé des réseaux internet des Cités Houzeau et
+      Franeau, et sert de <strong>"HelpDesk" pour ces cités étudiantes</strong>.
     </p>
-    <p>
+    <!-- <p>
       Nous disposons d'un local au sein de la Cité Houzeau (local 500) où nous
       mettons à disposition des PC en accès libre avec une session privée. Les
       PC disponibles sont très performants et permettent aussi bien de jouer à
       tes jeux préférés que de travailler sur des projets, le tout dans
       l'ambiance typique du Magellan.
-    </p>
+    </p> -->
     <p>
-      Le Cercle Magellan organise de plus le GAME, une LAN-Party de 48h où plus
-      de 100 joueurs participent chaque année à plusieurs tournois de jeux
-      vidéo.
+      Le Cercle Magellan organise de plus <strong
+        >le GAME, une LAN-Party de 48h</strong
+      > où plus de <strong>200 joueurs</strong> participent chaque année à
+      plusieurs tournois de jeux vidéo.
     </p>
     <p>
       Si tu es intéressé par l'informatique, les jeux vidéos, ou juste que tu as
       soif d'apprendre, n'hésite pas à nous rejoindre au local 500 ou à
       contacter un membre du comité !
     </p>
+  </section>
+  <section class="relative space-y-2 text-justify" id="500">
+    <h2 class="text-2xl font-medium">Local 500</h2>
+    <p>
+      Nous disposons d'un local au sein de la Cité Houzeau (local 500) où nous
+      mettons à disposition <strong
+        >des PC en accès libre avec une session privée</strong
+      >. Les PC disponibles sont très performants et permettent aussi bien de
+      jouer à tes jeux préférés que de travailler sur des projets, le tout dans
+      l'ambiance typique du Magellan.
+    </p>
+    <div class="h-32">
+      <Image
+        class="h-full rounded-lg object-cover shadow-md"
+        src={_500}
+        alt="Local 500"
+        quality={30}
+        format="webp"
+      />
+    </div>
   </section>
 </LayoutCercle>
