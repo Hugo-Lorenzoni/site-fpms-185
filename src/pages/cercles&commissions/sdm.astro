@@ -1,8 +1,11 @@
 ---
 import LayoutCercle from "@layouts/LayoutCercle.astro";
+import { Image } from "astro:assets";
 
 import _SDM from "@images/cercles/sdm.jpg";
 import imageComite from "@images/comités/sdm.jpg";
+import _600_1 from "@images/locaux/600-1.jpg";
+import _600_2 from "@images/locaux/600-2.jpg";
 
 const cercle = "Cercle Sono-Danse-Musique";
 
@@ -87,6 +90,37 @@ const links = [
     </p>
   </section>
   <section class="space-y-2 text-justify" id="600">
-    <h3 class="text-2xl font-medium">Local 600</h3><p>...</p>
+    <h3 class="text-2xl font-medium">Local 600</h3>
+    <div class="float-right ml-4 h-48 w-full pb-4 sm:w-1/3">
+      <Image
+        class="h-full rounded-lg object-cover shadow-md"
+        src={_600_1}
+        alt="Local 600"
+        quality={30}
+        format="webp"
+      />
+    </div>
+    <p>
+      La Sono dispose aussi d'un local, le 600, situé au 6ème étage de la Cité
+      Houzeau au fond du couloir à droite. Il est accessible à tous les
+      étudiants polytech et peut être réservé pour des répétitions ou des
+      enregistrements.
+    </p>
+    <div class="float-left mr-4 h-48 w-full pb-4 sm:w-1/3">
+      <Image
+        class="h-full rounded-lg object-cover shadow-md"
+        src={_600_2}
+        alt="Local 600"
+        quality={30}
+        format="webp"
+      />
+    </div>
+    <p>
+      <i>
+        Tu as bseoin d'un endroit où pratiquer ton instrument seul ou entre amis
+        ? Contacte nous pour réserver le local 600 gratuitement sur présentation
+        de ta carte fédé !
+      </i>
+    </p>
   </section>
 </LayoutCercle>

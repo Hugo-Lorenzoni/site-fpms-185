@@ -21,7 +21,7 @@ const { title, list } = Astro.props;
   >
     {
       list.map((item) => (
-        <li class="relative overflow-hidden rounded-2xl shadow-lg duration-150 hover:opacity-80">
+        <li class="relative aspect-[3/2] overflow-hidden rounded-2xl shadow-lg duration-150 hover:opacity-80">
           <a href={item.href}>
             <>
               <Image
