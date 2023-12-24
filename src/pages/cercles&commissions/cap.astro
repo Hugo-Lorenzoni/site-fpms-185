@@ -1,8 +1,10 @@
 ---
 import LayoutCercle from "@layouts/LayoutCercle.astro";
+import { Image } from "astro:assets";
 
 import _CAP from "@images/cercles/cap.jpg";
 import imageComite from "@images/comités/cap.jpg";
+import _LocalCAP from "@images/locaux/cap.jpg";
 
 const cercle = "Centrale d'Achats Polytech";
 
@@ -29,6 +31,15 @@ const links: { name: string; type: string; url: string }[] | undefined = [];
       lundi au vendredi de 12h30 à 13h15. C'est un lieu de convivialité mais pas
       que …
     </p>
+    <div class="h-32">
+      <Image
+        class="h-full w-full rounded-lg object-cover shadow-md"
+        src={_LocalCAP}
+        alt="Local CAP"
+        quality={30}
+        format="webp"
+      />
+    </div>
     <p>
       En effet, la CAP a plusieurs missions toutes liées à la mise à disposition
       de services pour la communauté estudiantine. Tout d'abord, une machine à
