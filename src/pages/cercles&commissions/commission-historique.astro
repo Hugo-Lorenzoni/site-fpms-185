@@ -3,6 +3,7 @@ import Layout from "@layouts/Layout.astro";
 import Links from "@components/Links.astro";
 
 import _CommHisto from "@images/commissions/commission-historique.jpg";
+import _1100_0 from "@images/locaux/1100.jpg";
 
 import { Image } from "astro:assets";
 
@@ -55,8 +56,21 @@ const links: { name: string; type: string; url: string }[] | undefined = [
           jalonnent l'histoire estudiantine de Mons et principalement celles des
           étudiants de la Faculté Polytechnique. Pour ce faire, nous rassemblons
           divers témoignages écrits, oraux et matériels que nous publierons sur
-          ce site internet.
+          <a
+            class="text-blue-900 underline"
+            href={links.find((link) => link.type === "WEBSITE")?.url}
+            >ce site internet</a
+          >.
         </p>
+        <div class="h-32">
+          <Image
+            class="h-full w-full rounded-lg object-cover shadow-md"
+            src={_1100_0}
+            alt="Local de la Commission Historique"
+            quality={30}
+            format="webp"
+          />
+        </div>
         <p>
           Toute contribution est donc la bienvenue ! Si vous êtes en possession
           de documents, objets, souvenirs ou tout simplement d'anecdotes que
