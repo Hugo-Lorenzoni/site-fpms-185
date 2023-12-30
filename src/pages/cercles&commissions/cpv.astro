@@ -67,10 +67,13 @@ const links = [
     <p>
       Nous sommes là tout le temps, donc n'hésite pas à nous chercher, nous
       sommes très souvent repérables par un drapeau orange et les photos sont
-      disponibles après quelques jours sur notre site Internet. Plus besoin de
-      sortir ton téléphone en soirée, tu peux compter sur nous pour remplir ton
-      téléphone de beaux clichés et peut-être aussi te fournir tes souvenirs de
-      guindaille.
+      disponibles après quelques jours sur <a
+        class="text-blue-900 underline"
+        href={links.find((link) => link.type === "WEBSITE")?.url}
+        >notre site internet</a
+      >. Plus besoin de sortir ton téléphone en soirée, tu peux compter sur nous
+      pour remplir ton téléphone de beaux clichés et peut-être aussi te fournir
+      tes souvenirs de guindaille.
     </p>
     <p>
       Mais ce n'est pas tout ! Si tu as besoin de matériel pour un projet (ou
