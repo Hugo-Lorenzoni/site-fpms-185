@@ -1,8 +1,10 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import Comite from "@components/Comite.astro";
 import Links from "@components/Links.astro";
 
 import _FPMaths from "@images/commissions/fpmaths.jpg";
+import imageComite from "@images/comités/fpmaths.jpg";
 
 import { Image } from "astro:assets";
 
@@ -79,21 +81,7 @@ const links: { name: string; type: string; url: string }[] | undefined = [
           >.
         </p>
       </section>
-      <section
-        class="mx-auto max-w-md rounded-lg border-r-4 border-blue-900 bg-white px-8 py-4 font-medium shadow-xl"
-      >
-        <h2 class="pb-4 text-center text-xl">Comité</h2>
-        <ul>
-          {
-            comite.map(({ role, name }) => (
-              <li>
-                {role ? <strong>{role} : </strong> : ""}
-                {name}
-              </li>
-            ))
-          }
-        </ul>
-      </section>
+      <Comite cercle={commission} comite={comite} imageComite={imageComite} />
       {links && links[0] ? <Links links={links} /> : ""}
     </div>
   </main>
