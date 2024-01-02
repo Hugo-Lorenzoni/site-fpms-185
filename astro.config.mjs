@@ -17,4 +17,11 @@ export default defineConfig({
       enabled: true,
     },
   }),
+  // Add the headers configuration to set CSP
+  serverOptions: {
+    headers: {
+      "Content-Security-Policy":
+        "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self';",
+    },
+  },
 });
