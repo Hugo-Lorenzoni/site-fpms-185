@@ -42,57 +42,74 @@ const comite = {
         </h1>
       </div>
     </section>
-    <section
-      class="mx-auto max-w-5xl space-y-2 rounded-lg border-l-4 border-blue-900 bg-white px-6 py-3 font-medium shadow-xl"
-    >
-      <h2 class="text-xl">Qu'est-ce que la Fédération des Étudiants FPMs ?</h2>
-      <p>
-        La <strong>Fédération des Étudiants FPMs</strong>
-         (aussi appelée <i>la Fédé</i>), fondée en 1837, est l'organisme
-        représentatif et folklorique des étudiants de la Faculté Polytechnique
-        de Mons. Cette Fédération est dirigée par la
-        <strong>Fédérale</strong> et est composée de douze
-        <strong>Cercles fédérés</strong>, six <strong>Commissions</strong> et
-        quatre <strong>Régionales</strong>.
-      </p>
+    <div class="flex gap-4">
+      <div class="grow space-y-6">
+        <section
+          class="w-full space-y-2 rounded-lg border-l-4 border-blue-900 bg-white px-6 py-3 font-medium shadow-xl"
+        >
+          <h2 class="text-xl">
+            Qu'est-ce que la Fédération des Étudiants FPMs ?
+          </h2>
+          <p>
+            La <strong>Fédération des Étudiants FPMs</strong>
+             (aussi appelée <i>la Fédé</i>), fondée en 1837, est l'organisme
+            représentatif et folklorique des étudiants de la Faculté
+            Polytechnique de Mons. Cette Fédération est dirigée par la
+            <strong>Fédérale</strong> et est composée de douze
+            <strong>Cercles fédérés</strong>, six <strong>Commissions</strong>
+             et quatre <strong>Régionales</strong>.
+          </p>
 
-      <ul>
-        <li><h3>Ses buts principaux sont :</h3></li>
-        <li>
-          - La représentation des étudiants Polytech auprès des instances
-          académiques
-        </li>
-        <li>
-          - L'organisation d'évènements folkloriques, culturels,
-          philantropiques, sportifs et festifs
-        </li>
-      </ul>
-    </section>
-    <section
-      class="mx-auto max-w-5xl rounded-lg border-r-4 border-blue-900 bg-white font-medium shadow-xl sm:flex"
-    >
-      <div class="aspect-video flex-1 overflow-hidden">
-        <Image
-          class="h-full w-full rounded-lg object-cover"
-          src={comiteFede}
-          alt="Comité de la Fédération des étudiants de la Faculté Polytechnique de Mons (FPMs)"
-          quality={30}
-          format="webp"
-        />
+          <ul>
+            <li><h3>Ses buts principaux sont :</h3></li>
+            <li>
+              - La représentation des étudiants Polytech auprès des instances
+              académiques
+            </li>
+            <li>
+              - L'organisation d'évènements folkloriques, culturels,
+              philantropiques, sportifs et festifs
+            </li>
+          </ul>
+        </section>
+        <section
+          class="w-full rounded-lg border-r-4 border-blue-900 bg-white font-medium shadow-xl sm:flex"
+        >
+          <div class="aspect-video flex-1 overflow-hidden">
+            <Image
+              class="h-full w-full rounded-lg object-cover"
+              src={comiteFede}
+              alt="Comité de la Fédération des étudiants de la Faculté Polytechnique de Mons (FPMs)"
+              quality={30}
+              format="webp"
+            />
+          </div>
+          <div
+            class="inline-flex w-full flex-col justify-center px-6 py-6 sm:w-auto"
+          >
+            <h2 class="mx-auto max-w-fit pb-4 text-xl">La Fédérale</h2>
+            <ul>
+              <li><strong>Président :</strong>{" "}{comite.president}</li>
+              <li><strong>Vice-président :</strong>{" "}{comite.vp}</li>
+              <li><strong>Secrétaire :</strong>{" "}{comite.secretaire}</li>
+              <li><strong>Trésorier :</strong>{" "}{comite.tresorier}</li>
+              <li><strong>DRE* :</strong>{" "}{comite.dre}</li>
+              <li class="text-xs italic">*Délégué aux Relations Extérieures</li>
+            </ul>
+          </div>
+        </section>
       </div>
-      <div
-        class="inline-flex w-full flex-col justify-center px-6 py-6 sm:w-auto"
+      <aside
+        class="hidden w-[340px] flex-none overflow-hidden rounded-lg lg:flex"
       >
-        <h2 class="mx-auto max-w-fit pb-4 text-xl">La Fédérale</h2>
-        <ul>
-          <li><strong>Président :</strong>{" "}{comite.president}</li>
-          <li><strong>Vice-président :</strong>{" "}{comite.vp}</li>
-          <li><strong>Secrétaire :</strong>{" "}{comite.secretaire}</li>
-          <li><strong>Trésorier :</strong>{" "}{comite.tresorier}</li>
-          <li><strong>DRE* :</strong>{" "}{comite.dre}</li>
-          <li class="text-xs italic">*Délégué aux Relations Extérieures</li>
-        </ul>
-      </div>
-    </section>
+        <iframe
+          src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffede.fpms&tabs=timeline&width=340&height=1000&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
+          width="340"
+          height="1000"
+          allowfullscreen="true"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        ></iframe>
+      </aside>
+    </div>
   </main>
 </Layout>
