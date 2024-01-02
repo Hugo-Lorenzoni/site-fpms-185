@@ -13,17 +13,7 @@ export default defineConfig({
     webAnalytics: {
       enabled: true,
     },
-    speedInsights: {
-      enabled: true,
-    },
   }),
-  vite: {
-    define: {
-      "import.meta.env.PUBLIC_VERCEL_ANALYTICS_ID": JSON.stringify(
-        process.env.VERCEL_ANALYTICS_ID,
-      ),
-    },
-  },
   // Add the headers configuration to set CSP
   serverOptions: {
     headers: {

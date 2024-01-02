@@ -3,6 +3,7 @@ import Footer from "@components/Footer.astro";
 import Nav from "@components/Nav.astro";
 
 import { ViewTransitions } from "astro:transitions";
+import SpeedInsights from "@vercel/speed-insights/astro";
 
 interface Props {
   title: string;
@@ -30,6 +31,7 @@ const { title } = Astro.props;
     <link rel="canonical" href="https://fede.fpms.as.be" />
     <title>Fédé FPMs | {title}</title>
     <ViewTransitions />
+    <SpeedInsights />
   </head>
   <body class="antialiased" transition:animate="fade">
     <Nav />
