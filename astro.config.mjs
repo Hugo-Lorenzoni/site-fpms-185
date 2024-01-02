@@ -13,6 +13,9 @@ export default defineConfig({
     webAnalytics: {
       enabled: true,
     },
+    speedInsights: {
+      enabled: true,
+    },
   }),
   // Add the headers configuration to set CSP
   serverOptions: {
