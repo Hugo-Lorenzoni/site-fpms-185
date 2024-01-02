@@ -9,11 +9,7 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [react(), tailwind()],
   output: "static",
-  adapter: vercel({
-    webAnalytics: {
-      enabled: true,
-    },
-  }),
+  adapter: vercel({ analytics: true }),
   // vite: {
   //   define: {
   //     "import.meta.env.PUBLIC_VERCEL_ANALYTICS_ID": JSON.stringify(
