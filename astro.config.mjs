@@ -10,13 +10,13 @@ export default defineConfig({
   integrations: [react(), tailwind()],
   output: "static",
   adapter: vercel({ analytics: true }),
-  // vite: {
-  //   define: {
-  //     "import.meta.env.PUBLIC_VERCEL_ANALYTICS_ID": JSON.stringify(
-  //       process.env.VERCEL_ANALYTICS_ID,
-  //     ),
-  //   },
-  // },
+  vite: {
+    define: {
+      "import.meta.env.PUBLIC_VERCEL_ANALYTICS_ID": JSON.stringify(
+        process.env.VERCEL_ANALYTICS_ID,
+      ),
+    },
+  },
   // serverOptions: {
   //   headers: {
   //     "Content-Security-Policy":
