@@ -6,6 +6,11 @@ import imageComite from "@images/comités/peyresq.jpg";
 
 const cercle = "Cercle Peyresq";
 
+const video = {
+  url: "https://www.youtube.com/watch?v=OPQXgNBWbqQ",
+  promo: 185, // Promo durant laquelle la vidéo a été tournée
+};
+
 const comite = [
   { role: "Président", name: "Rémy Lempire" },
   { role: "Vice-présidente", name: "Perrine Vandicke" },
@@ -19,6 +24,7 @@ const links: { name: string; type: string; url: string }[] | undefined = [];
 <LayoutCercle
   cercle={cercle}
   imageCercle={_Peyresq}
+  video={video}
   comite={comite}
   imageComite={imageComite}
   links={links}
@@ -68,4 +74,16 @@ const links: { name: string; type: string; url: string }[] | undefined = [];
       village !
     </p>
   </section>
+  <!-- <section class="space-y-2 text-justify">
+    <h3 class="text-2xl font-medium">
+      Vidéo de présentation du Cercle Peyresq (185)
+    </h3>
+    <iframe
+      class="h-96 w-full overflow-hidden rounded-lg"
+      src="https://www.youtube-nocookie.com/embed/OPQXgNBWbqQ"
+      title="Vidéo Présentation Peyresq 185"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </section> -->
 </LayoutCercle>

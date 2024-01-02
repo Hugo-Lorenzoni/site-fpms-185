@@ -6,6 +6,11 @@ import imageComite from "@images/comités/mons-mines.jpg";
 
 const cercle = "Mons-Mines";
 
+const video = {
+  url: "https://www.youtube.com/watch?v=cMB74CGXbe4",
+  promo: 185, // Promo durant laquelle la vidéo a été tournée
+};
+
 const comite = [
   { role: "Président", name: "Philippe Asvestaris" },
   { role: "Rédacteur en chef", name: "Arno Panarisi" },
@@ -19,6 +24,7 @@ const links: { name: string; type: string; url: string }[] | undefined = [];
 <LayoutCercle
   cercle={cercle}
   imageCercle={_MM}
+  video={video}
   comite={comite}
   imageComite={imageComite}
   links={links}

@@ -6,6 +6,11 @@ import imageComite from "@images/comités/scientifique.jpg";
 
 const cercle = "Cercle Scientifique";
 
+const video = {
+  url: "https://www.youtube.com/watch?v=EUW6xxHjwIY",
+  promo: 185, // Promo durant laquelle la vidéo a été tournée
+};
+
 const comite = [
   { role: "Président", name: "Nathan Marcus" },
   { role: "Secrétaire", name: "Audran Duquène" },
@@ -17,6 +22,7 @@ const links: { name: string; type: string; url: string }[] | undefined = [];
 <LayoutCercle
   cercle={cercle}
   imageCercle={_Scientifique}
+  video={video}
   comite={comite}
   imageComite={imageComite}
   links={links}
