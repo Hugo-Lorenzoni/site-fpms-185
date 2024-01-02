@@ -35,9 +35,19 @@ const links = [
     url: "https://www.facebook.com/cercle.culturel.fpms",
   },
   {
+    name: "Local de projection 9/10 - Facebook",
+    type: "FACEBOOK",
+    url: "https://www.facebook.com/localprojection",
+  },
+  {
     name: "BibliCité 11/12 - Facebook",
     type: "FACEBOOK",
     url: "https://www.facebook.com/groups/272164387493",
+  },
+  {
+    name: "Groupe Jeux - Facebook",
+    type: "FACEBOOK",
+    url: "https://www.facebook.com/groups/729600190404859",
   },
   {
     name: "Instagram",
@@ -100,21 +110,28 @@ const links = [
     </div>
     <p>
       Le local de projection situé à l'inter-étage 9/10 (d'où son nom) vous
-      permet de regarder films ou séries de votre choix avec vos amis jusqu'à
-      tard le soir. Pour cela, il vous suffit de nous prévenir via notre page
-      Facebook pour que le comité vous ouvre le local. Nous vous demandons
-      simplement de ranger le local quand vous avez fini. Le local est
-      accessible exclusivement en semaine.
+      permet de <strong>regarder films ou séries</strong> de votre choix avec
+      vos amis jusqu'à tard le soir. Pour cela, il vous suffit de nous prévenir
+      via <a
+        class="text-blue-900 underline"
+        href={links.find(
+          (link) => link.name === "Local de projection 9/10 - Facebook",
+        )?.url}>notre page Facebook</a
+      > pour que le comité vous ouvre le local. Nous vous demandons simplement
+      de ranger le local quand vous avez fini. Le local est accessible
+      exclusivement en semaine.
     </p>
   </section>
   <section class="clear-both space-y-2 text-justify">
     <h3 class="text-2xl font-medium">Voyage Q :</h3>
     <p>
-      Chaque année, le Q organise un voyage de quelques jours dans une ville
-      d'Europe durant un week-end du mois de novembre. Ce voyage est ouvert à
-      tous et est proposé à un prix des plus démocratiques. Les années
-      précédentes, les destinations étaient Munich, Hambourg, Vienne, Prague,
-      ...
+      Chaque année, le Q organise <strong
+        >un voyage de quelques jours dans une ville d'Europe durant un week-end
+        du mois de novembre</strong
+      >. Ce voyage est ouvert à tous et est proposé à <strong
+        >un prix des plus démocratiques</strong
+      >. Les années précédentes, les destinations étaient Munich, Hambourg,
+      Vienne, Prague, ...
     </p>
   </section>
   <section class="space-y-2 text-justify">
