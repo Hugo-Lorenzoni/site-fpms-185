@@ -8,6 +8,7 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), tailwind(), sitemap()],
+  site: "https://fede.fpms.ac.be",
   output: "static",
   adapter: vercel({
     webAnalytics: {
