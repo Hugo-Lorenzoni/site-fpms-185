@@ -4,6 +4,7 @@ import LayoutCercle from "@layouts/LayoutCercle.astro";
 import _Magellan from "@images/cercles/magellan.jpg";
 import imageComite from "@images/comités/magellan.jpg";
 import _500 from "@images/locaux/500.jpg";
+import Game from "@images/grands-evenements/game.jpg";
 
 import { Image } from "astro:assets";
 
@@ -67,14 +68,16 @@ const links = [
       Le Magellan est également chargé des réseaux internet des Cités Houzeau et
       Franeau, et sert de <strong>"HelpDesk" pour ces cités étudiantes</strong>.
     </p>
-    <!-- <p>
-      Nous disposons d'un local au sein de la Cité Houzeau (local 500) où nous
-      mettons à disposition des PC en accès libre avec une session privée. Les
-      PC disponibles sont très performants et permettent aussi bien de jouer à
-      tes jeux préférés que de travailler sur des projets, le tout dans
-      l'ambiance typique du Magellan.
-    </p> -->
-    <p>
+    <div class="float-right ml-4 h-48 w-full pb-4 sm:w-1/3">
+      <Image
+        class="h-full rounded-lg object-cover shadow-md"
+        src={Game}
+        alt="Game (LAN party) - Cercle Magellan"
+        quality={30}
+        format="webp"
+      />
+    </div>
+    <p id="game">
       Le Cercle Magellan organise de plus <strong
         >le GAME, une LAN-Party de 48h</strong
       > où plus de <strong>200 joueurs</strong> participent chaque année à
