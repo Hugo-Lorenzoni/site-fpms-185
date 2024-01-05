@@ -16,18 +16,22 @@ export default {
       fontFamily: {
         sans: ["PoppinsVariable", "Poppins", ...defaultTheme.fontFamily.sans],
       },
-      gridTemplateColumns: {
-        // Complex site-specific column configuration
-        footer: "repeat(3, 1fr) auto",
+      boxShadow: {
+        // Box shadow generated with https://shadows.brumm.af/
+        box: [
+          "0 0.6px 2.2px rgba(0, 0, 0, 0.017)",
+          "0 1.3px 5.3px rgba(0, 0, 0, 0.024)",
+          "0 2.5px 10px rgba(0, 0, 0, 0.03)",
+          "0 4.5px 17.9px rgba(0, 0, 0, 0.036)",
+          "0 8.4px 33.4px rgba(0, 0, 0, 0.043)",
+          "0 20px 80px rgba(0, 0, 0, 0.06)",
+        ],
       },
       dropShadow: {
+        // Drop shadow white pour le
+        // "Fédération des Étudiants" de la page d'accueil
         white: ["0 1px 4px white", "0 0px 5px white"],
-        title: [
-          "0 0px 4px black",
-          "0 0px 20px black",
-          "0 0px 30px black",
-          "0 0px 40px black",
-        ],
+        // Drop shadow pour le titre des liens dans <Grid />
         normal: [
           "0 1px 2px rgb(0 0 0 / 1)",
           "0 1px 8px rgb(0 0 0 / 0.8)",
