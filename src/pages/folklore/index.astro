@@ -9,6 +9,7 @@ import Centrale from "@images/régionales/centrale.jpg";
 import Boraine from "@images/régionales/boraine.jpg";
 
 import ComiteFêtes from "@images/comités/fetes.jpg";
+import Facebook from "@icons/Facebook.astro";
 
 const fêtes = {
   name: "Cercle des Fêtes",
@@ -41,6 +42,11 @@ const régionales = [
     image: Boraine,
   },
 ];
+
+const link = {
+  name: "Plus d'infos du la Bleusaille Polytech",
+  url: "https://www.facebook.com/profile.php?id=100069720777042",
+};
 ---
 
 <Layout title="Folklore">
@@ -53,7 +59,7 @@ const régionales = [
     <section class="space-y-3">
       <h2 class="text-xl font-semibold">Cercle des Fêtes</h2>
       <div
-        class="shadow-box rounded-lg border-r-4 border-blue-900 bg-white font-medium sm:flex"
+        class="rounded-lg border-r-4 border-blue-900 bg-white font-medium shadow-box sm:flex"
       >
         <div class="aspect-video flex-1 overflow-hidden">
           <Image
@@ -86,43 +92,43 @@ const régionales = [
         <i>Air : Le Chant des Chasseurs Ardennais</i>
         <p class="mt-2">
           En notre Wallonie, il est une Faculté, <br />
-           Où l'on n'craint pas la vie de l'étudiant guinzé. <br />
-           Quand dans la guindaille, parmi les futailles, <br />
-           La Polytech de Mons est là, on ne nous ignore pas. <br />
-           Et aux p'tites heures du matin, <br />
-           Quand tous les gamins sont morts pleins, <br />
-           La Polytech de Mons tient le coup et on reste debout. <br />
-           On nous a dit : les études que vous faites,<br />
-           Sont pas faciles, il faudra travailler.<br />
-           Vous ne serez pas toujours à la fête,<br />
-           Si vous ne voulez pas vous faire péter. <br />
-           Mais pour un étudiant, c'est pas une vie, <br />
-           Que de bloquer sans cesse et sans arrêt. <br />
+          Où l'on n'craint pas la vie de l'étudiant guinzé. <br />
+          Quand dans la guindaille, parmi les futailles, <br />
+          La Polytech de Mons est là, on ne nous ignore pas. <br />
+          Et aux p'tites heures du matin, <br />
+          Quand tous les gamins sont morts pleins, <br />
+          La Polytech de Mons tient le coup et on reste debout. <br />
+          On nous a dit : les études que vous faites,<br />
+          Sont pas faciles, il faudra travailler.<br />
+          Vous ne serez pas toujours à la fête,<br />
+          Si vous ne voulez pas vous faire péter. <br />
+          Mais pour un étudiant, c'est pas une vie, <br />
+          Que de bloquer sans cesse et sans arrêt. <br />
           <strong
             >[ J'm'en fous, j'suis en Polytechnique, <br />
-             Pour m'amuser, pour boire et guindailler ] Bis</strong
+            Pour m'amuser, pour boire et guindailler ] Bis</strong
           ><br />
           <br />
-           Et quand nous nous éveillons, midi sonne,<br />
-           II est trop tard, encore trois cours brossés. <br />
-           Aucun regret, la bière est toujours bonne,<br />
-           Et nous attend au Bar de la Cité.<br />
-           Agités par un réflexe éthylique, <br />
-           On se lève et on va la déguster,<br />
+          Et quand nous nous éveillons, midi sonne,<br />
+          II est trop tard, encore trois cours brossés. <br />
+          Aucun regret, la bière est toujours bonne,<br />
+          Et nous attend au Bar de la Cité.<br />
+          Agités par un réflexe éthylique, <br />
+          On se lève et on va la déguster,<br />
           <strong
             >[ On est entrés à la Polytechnique,<br />
-             Pour s'amuser, pour boire et guindailler ] Bis</strong
+            Pour s'amuser, pour boire et guindailler ] Bis</strong
           ><br />
           <br />
-           Et quand nous sortirons de notre rêve <br />
-           Une triste vie pour nous va commencer : <br />
-           La femme, les gosses et puis enfin la crève,<br />
-           Ne cesserons pas de nous emmerder. <br />
-           Profitons-en, le temps passe si vite,<br />
-           On n'meurt qu'une fois, c'est là la vérité. <br />
+          Et quand nous sortirons de notre rêve <br />
+          Une triste vie pour nous va commencer : <br />
+          La femme, les gosses et puis enfin la crève,<br />
+          Ne cesserons pas de nous emmerder. <br />
+          Profitons-en, le temps passe si vite,<br />
+          On n'meurt qu'une fois, c'est là la vérité. <br />
           <strong
             >[ On est rentrés à la Polytechnique,<br />
-             Pour s'amuser, pour boire et guindailler ] Bis</strong
+            Pour s'amuser, pour boire et guindailler ] Bis</strong
           ><br />
         </p>
       </div>
@@ -137,6 +143,14 @@ const régionales = [
         aussi important pour un ingénieur, n'apparaît dans aucun programme de
         cours, mais a une grande place dans la Bleusaille.
       </div>
+      <a
+        class="inline-flex gap-2 text-blue-900 underline duration-150 hover:translate-x-2 hover:opacity-80"
+        href={link.url}
+      >
+        <Facebook />
+
+        {link.name}
+      </a>
     </section>
   </main>
 </Layout>

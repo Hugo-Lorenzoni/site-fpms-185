@@ -16,7 +16,13 @@ const comite = [
   { role: "Secrétaire", name: "Audran Duquène" },
 ];
 
-const links: { name: string; type: string; url: string }[] | undefined = [];
+const links: { name: string; type: string; url: string }[] | undefined = [
+  {
+    name: "Facebook",
+    type: "FACEBOOK",
+    url: "https://www.facebook.com/profile.php?id=100064300376795",
+  },
+];
 ---
 
 <LayoutCercle
@@ -38,8 +44,8 @@ const links: { name: string; type: string; url: string }[] | undefined = [];
       <strong
         >Le Cercle Scientifique est premièrement un Cercle tourné vers l'aide
         aux étudiants et aux autres Cercles de la Faculté.</strong
-      > Comment peut-il vous aider ? Que cela soit pour des petites réparations
-      dans votre kot comme un problème d'armoire ou encore un souci de fenêtre, <strong
+      > Comment peut-il vous aider ? Que cela soit pour des petites réparations dans
+      votre kot comme un problème d'armoire ou encore un souci de fenêtre, <strong
         >le Cercle Scientifique est disponible tout au long de l'année pour vous
         venir en aide !</strong
       >
@@ -52,11 +58,10 @@ const links: { name: string; type: string; url: string }[] | undefined = [];
     </p>
     <p>
       Le Cercle Scientifique est également le Cercle qui s'implique dans deux
-      des <strong>trois méchouis annuels</strong> et qui organise chaque année
-      depuis 10 ans maintenant la <strong>BGT (Big Guinze Theory)</strong> avec
-      l'aide du <a
-        class="text-blue-900 underline"
-        href="/cercles&commissions/radio-extra">Cercle Radio Extra</a
+      des <strong>trois méchouis annuels</strong> et qui organise chaque année depuis
+      10 ans maintenant la <strong>BGT (Big Guinze Theory)</strong> avec l'aide du
+      <a class="text-blue-900 underline" href="/cercles&commissions/radio-extra"
+        >Cercle Radio Extra</a
       > et du <a
         class="text-blue-900 underline"
         href="/cercles&commissions/magellan">Cercle Magellan</a
