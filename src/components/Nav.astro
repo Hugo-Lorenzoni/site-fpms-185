@@ -13,10 +13,11 @@ const navItems = [
 ];
 ---
 
-<header class="top-0 z-20 bg-white sm:sticky" transition:animate="none">
-  <nav
-    class="inlne-flex container mx-auto flex-col justify-between gap-4 p-4 font-semibold text-blue-900"
-  >
+<header
+  class="sticky top-0 z-20 bg-white font-semibold text-blue-900"
+  transition:persist
+>
+  <nav class="container mx-auto flex justify-between p-4 lg:block">
     <a
       href="/"
       class="inline-flex items-center gap-2 text-lg duration-150 hover:opacity-80"
@@ -59,7 +60,9 @@ const navItems = [
       </svg>
       <div>Fédération des Étudiants FPMs</div>
     </a>
-    <ul class="flex flex-wrap justify-between gap-2 text-sm sm:text-base">
+    <ul
+      class="hidden flex-wrap justify-between gap-2 text-sm lg:flex xl:text-base"
+    >
       {
         navItems.map((navItem) => (
           <li class="mx-auto flex items-center justify-center">
@@ -73,5 +76,99 @@ const navItems = [
         ))
       }
     </ul>
+    <button id="menu-toggle" class="focus:outline-none lg:hidden">
+      <svg
+        class="h-8 w-8"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="3"
+          d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
   </nav>
+  <div
+    id="mobile-menu"
+    data-visible="false"
+    class="fixed bottom-0 right-0 top-0 hidden bg-white bg-opacity-95 lg:hidden"
+  >
+    <div class="flex justify-end p-4">
+      <button id="menu-close" class="my-1">
+        <svg
+          class="h-8 w-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="3"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <ul class="flex h-full flex-col gap-4 p-8">
+      {
+        navItems.map((navItem) => (
+          <li class="flex flex-col space-y-4">
+            <div class="inline-flex">
+              <a
+                class="relative px-1 py-1 after:absolute after:bottom-0 after:left-0 after:z-50 after:h-[3px] after:w-0 after:rounded-full after:bg-blue-900 after:duration-500 hover:after:w-full"
+                href={navItem.href}
+              >
+                {navItem.title}
+              </a>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </header>
+
+<script>
+  // JavaScript to toggle the mobile menu
+  const mobileMenu = document.getElementById("mobile-menu");
+  const menuToggle = document.getElementById("menu-toggle");
+  const menuClose = document.getElementById("menu-close");
+
+  function openMobileMenu() {
+    mobileMenu?.classList.toggle("hidden");
+    mobileMenu?.setAttribute("data-visible", "true");
+  }
+
+  function closeMobileMenu() {
+    mobileMenu?.classList.add("hidden");
+    mobileMenu?.setAttribute("data-visible", "false");
+  }
+
+  menuToggle?.addEventListener("click", function () {
+    // mobileMenu?.classList.toggle("hidden");
+    openMobileMenu();
+  });
+
+  menuClose?.addEventListener("click", function () {
+    // mobileMenu?.classList.add("hidden");
+    closeMobileMenu();
+  });
+
+  // Close the mobile menu when clicking outside of it
+  document.addEventListener("click", function (event) {
+    if (
+      !(event.target instanceof Node && mobileMenu?.contains(event.target)) &&
+      !(event.target instanceof Node && menuToggle?.contains(event.target))
+    ) {
+      closeMobileMenu();
+    }
+  });
+  document.addEventListener("astro:before-preparation", () => {
+    closeMobileMenu();
+  });
+</script>
