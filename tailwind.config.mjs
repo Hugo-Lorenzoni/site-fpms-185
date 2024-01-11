@@ -16,6 +16,9 @@ export default {
       fontFamily: {
         sans: ["PoppinsVariable", "Poppins", ...defaultTheme.fontFamily.sans],
       },
+      screens: {
+        xs: "420px",
+      },
       boxShadow: {
         // Box shadow generated with https://shadows.brumm.af/
         box: [
