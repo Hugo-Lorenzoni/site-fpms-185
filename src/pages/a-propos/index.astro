@@ -1,19 +1,56 @@
 ---
+import PVIcon from "@icons/PVIcon.astro";
+import QuestionIcon from "@icons/QuestionIcon.astro";
 import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout title="À propos">
-  <main class="container mx-auto space-y-6 px-4 py-4">
+  <main class="container mx-auto max-w-5xl space-y-6 px-4 py-4">
     <h1
       class="bg-gradient-to-r from-blue-900 to-blue-600 bg-clip-text text-3xl font-bold text-transparent"
     >
       Ressources utiles pour les étudiants
     </h1>
-    <h2>PV de réunion</h2>
-    <p>Coming soon ...</p>
-    <h2>Statuts de la Fédérale</h2>
-    <p>Coming soon ...</p>
-    <h2>FAQ</h2>
-    <p>Coming soon ...</p>
+    <section
+      class="mx-auto space-y-2 rounded-lg border-l-4 border-blue-900 bg-white px-6 py-3 font-medium shadow-box"
+    >
+      <h2 class="text-xl">PV de réunion</h2>
+      <p>
+        L'ensemble des Présidents de Cercles et de Régionales ainsi que les
+        Comités de la Fédérale et du Cercle des Fêtes forment le Comité Exécutif
+        de la Fédération, aussi appelée la « Salle Fédé ».
+      </p>
+      <p>
+        Vous trouverez ici les PV des réunions organisées au sein de la Salle
+        Fédé !
+      </p>
+
+      <p class="flex gap-2"><PVIcon />Coming soon ...</p>
+    </section>
+    <section
+      class="mx-auto space-y-2 rounded-lg border-r-4 border-blue-900 bg-white px-6 py-3 font-medium shadow-box"
+    >
+      <h2 class="text-xl">Statuts de la Fédérale</h2>
+      <p>Coming soon ...</p>
+    </section>
+    <section
+      class="mx-auto space-y-2 rounded-lg border-l-4 border-blue-900 bg-white px-6 py-3 font-medium shadow-box"
+    >
+      <h2 class="flex gap-2 text-xl">
+        <QuestionIcon /> FAQ
+      </h2>
+      <section>
+        <h3 class="font-semibold">
+          Puis-je obtenir une carte fédé si je ne suis pas baptisé ?
+        </h3>
+        <p>Oui.</p>
+      </section>
+      <section>
+        <h3 class="font-semibold">
+          Puis-je obtenir une carte fédé si je ne suis pas en Polytech ?
+        </h3>
+        <p>Oui.</p>
+      </section>
+    </section>
   </main>
 </Layout>

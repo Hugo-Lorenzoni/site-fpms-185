@@ -1,0 +1,42 @@
+---
+import Layout from "@layouts/Layout.astro";
+
+const title = "Devenir membre";
+---
+
+<Layout title={title}>
+  <main
+    class="container mx-auto flex min-h-[calc(100vh-330px)] flex-col justify-center space-y-6 px-4 py-4"
+  >
+    <h1
+      class="bg-gradient-to-r from-blue-900 to-blue-600 bg-clip-text text-3xl font-bold text-transparent"
+    >
+      Comment de devenir membre ?
+    </h1>
+    <section
+      class="mx-auto space-y-2 rounded-lg border-l-4 border-blue-900 bg-white px-6 py-3 font-medium shadow-box"
+    >
+      <h2 class="text-xl">La carte Fédé</h2>
+      <p>
+        La carte Fédé est la carte de membre de la Fédération des Étudiants
+        FPMs. <strong>Elle est gratuite pour les étudiants de BAC 1</strong> et disponible
+        au prix de 10€ pour le reste des étudiants de la Polytech.
+      </p>
+      <p>
+        Elle offre
+        <strong>des réductions pour les activités des Cercles fédérés</strong> tels
+        que la BGT, le Ski, le Voyage Q et pleins d'autres !
+      </p>
+      <p>Il est possible de l'obtenir de diverses façons :</p>
+      <ol>
+        <li>
+          - En début d'année pendant de la Welcome Week, lors des activités de
+          la Fédé
+        </li>
+        <li>- Lors de la distribution des Packs Guido</li>
+        <li>- Aux différentes soirées de la Fédé</li>
+        <li>- En prénant contacte au près du trésorier de la Fédé</li>
+      </ol>
+    </section>
+  </main>
+</Layout>

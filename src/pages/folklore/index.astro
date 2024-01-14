@@ -8,6 +8,8 @@ import Frontalière from "@images/régionales/frontaliere.jpg";
 import Centrale from "@images/régionales/centrale.jpg";
 import Boraine from "@images/régionales/boraine.jpg";
 
+import CerclePolytech from "@images/cercle-polytech.jpg";
+
 import ComiteFêtes from "@images/comités/fetes.jpg";
 import Facebook from "@icons/Facebook.astro";
 
@@ -56,8 +58,34 @@ const link = {
     >
       Folklore
     </h1>
+    <div class="h-80 w-full overflow-hidden rounded-2xl">
+      <Image
+        class="-z-10 h-full w-full object-cover"
+        src={CerclePolytech}
+        alt="Cercle Polytech"
+        quality={100}
+        format="webp"
+      />
+    </div>
+    <section
+      class="mx-auto space-y-2 rounded-lg border-l-4 border-blue-900 bg-white px-6 py-3 font-medium shadow-box"
+    >
+      <h2 class="text-xl">Cercle Polytech</h2>
+      <p>
+        Le Cercle Polytech Mons est le Cercle des étudiants de la Faculté
+        Polytechnique de Mons (F.P.Ms). Il est composé de tous les étudiants
+        baptisés de la faculté mais aussi d'études extérieures et est dirigé par
+        le comité des Fêtes élus chaque année. Il est le garant du folklore de
+        la Polytech et des traditions éstudiantines en cette faculté. C'est lui
+        qui organise principalement des soirées privées appellées <i
+          >« guindailles »</i
+        > mais aussi d'autres activités folklorique telles que la Saint Nic ou le
+        Crasino. Il est aussi le garant de la Bleusaille, qui est l'intégration des
+        nouveaux étudiants.
+      </p>
+    </section>
     <section class="space-y-3">
-      <h2 class="text-xl font-semibold">Cercle des Fêtes</h2>
+      <h2 class="text-xl font-semibold">Comité des Fêtes</h2>
       <div
         class="rounded-lg border-r-4 border-blue-900 bg-white font-medium shadow-box sm:flex"
       >
