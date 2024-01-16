@@ -18,11 +18,11 @@ export default defineConfig({
   ],
   site: "https://fede.fpms.ac.be",
   output: "static",
-  adapter: vercel({
-    webAnalytics: {
-      enabled: true,
-    },
-  }),
+  // adapter: vercel({
+  //   webAnalytics: {
+  //     enabled: true,
+  //   },
+  // }),
   // Add the headers configuration to set CSP
   serverOptions: {
     headers: {
