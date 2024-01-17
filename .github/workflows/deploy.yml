@@ -16,7 +16,7 @@ on:
 env:
   BUILD_PATH: "." # default value when not using subfolders
   # BUILD_PATH: subfolder
-  NGINX_PATH: "/home/magellan/dockge-stacks/site-astro/src"
+  NGINX_PATH: "/home/magellan/site-astro"
 
 jobs:
   build:
