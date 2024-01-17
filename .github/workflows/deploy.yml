@@ -16,6 +16,7 @@ on:
 env:
   BUILD_PATH: "." # default value when not using subfolders
   # BUILD_PATH: subfolder
+  NGINX_PATH: "/home/magellan/dockge-stacks/site-astro/src"
 
 jobs:
   build:
@@ -60,7 +61,12 @@ jobs:
           ${{ steps.detect-package-manager.outputs.runner }} astro build
         working-directory: ${{ env.BUILD_PATH }}
 
-      - name: Copy to nginx source folder
+      - name: Create nginx html folder
         run: |
-          cp -r ${{ env.BUILD_PATH }}/dist/* /home/magellan/dockge-stacks/site-astro/src
+          mkdir -p ${{ env.NGINX_PATH }}
+        working-directory: ${{ env.BUILD_PATH }}
+
+      - name: Copy to nginx html folder
+        run: |
+          cp -r ${{ env.BUILD_PATH }}/dist/* ${{ env.NGINX_PATH }}
         working-directory: ${{ env.BUILD_PATH }}
