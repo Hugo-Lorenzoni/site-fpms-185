@@ -58,3 +58,8 @@ jobs:
         run: |
           ${{ steps.detect-package-manager.outputs.runner }} astro build
         working-directory: ${{ env.BUILD_PATH }}
+
+      - name: Copy to nginx source folder
+        run: |
+          cp -r ${{ env.BUILD_PATH }}/dist/* /home/magellan/dockge-stacks/site-astro/src
+        working-directory: ${{ env.BUILD_PATH }}
