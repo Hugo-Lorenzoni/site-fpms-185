@@ -157,7 +157,6 @@ const navItems = [
       if (menuToggle?.contains(event.target)) {
         mobileMenu?.classList.remove("hidden");
         mobileMenu?.setAttribute("data-visible", "true");
-        console.log("open");
       } else if (
         menuClose?.contains(event.target) ||
         (!mobileMenu?.contains(event.target) &&
@@ -165,12 +164,7 @@ const navItems = [
       ) {
         mobileMenu?.classList.add("hidden");
         mobileMenu?.setAttribute("data-visible", "false");
-        console.log("close");
       }
     }
   });
-
-  // document.addEventListener("astro:before-preparation", () => {
-  //   closeMobileMenu();
-  // });
 </script>
