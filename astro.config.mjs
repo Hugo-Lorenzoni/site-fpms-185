@@ -8,20 +8,10 @@ import robotsTxt from "astro-robots-txt";
 
 // https://astro.build/config
 export default defineConfig({
-  redirects: [
-    {
-      "/cercles": {
-        status: 301,
-        destination: "/cercles&commissions",
-      },
-    },
-    {
-      "/houzeau": {
-        status: 301,
-        destination: "/cite-houzeau",
-      },
-    },
-  ],
+  redirects: {
+    "/cercles": "/cercles&commissions",
+    "/houzeau": "/cite-houzeau",
+  },
   integrations: [
     react(),
     tailwind({
