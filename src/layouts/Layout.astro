@@ -37,8 +37,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="canonical" href={canonicalURL} />
     <title>Fédé FPMs{title === "Accueil" ? "" : ` | ${title}`}</title>
     <ViewTransitions />
-    <script defer src="/_vercel/speed-insights/script.js" transition:persist
-    ></script>
     <link rel="sitemap" href="/sitemap-index.xml" />
     <AstroFont
       config={[
