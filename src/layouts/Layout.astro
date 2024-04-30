@@ -1,6 +1,7 @@
 ---
 import Footer from "@components/Footer.astro";
 import Nav from "@components/Nav.astro";
+import SpeedInsights from "@vercel/speed-insights/astro";
 
 import { ViewTransitions } from "astro:transitions";
 import { AstroFont } from "astro-font";
@@ -38,6 +39,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <title>Fédé FPMs{title === "Accueil" ? "" : ` | ${title}`}</title>
     <ViewTransitions />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <SpeedInsights />
     <AstroFont
       config={[
         {
