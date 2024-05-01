@@ -51,7 +51,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="og:url" content={canonicalURL} />
     {
       page === "Accueil" ? (
-        <meta name="og:image" content={Astro.site + image.src} />
+        <meta
+          name="og:image"
+          content={canonicalURL.toString().slice(0, -1) + image.src}
+        />
       ) : (
         ""
       )
