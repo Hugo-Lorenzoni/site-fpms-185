@@ -7,12 +7,19 @@ import { ViewTransitions } from "astro:transitions";
 import { AstroFont } from "astro-font";
 
 import "@styles/base.css";
+import { getImage } from "astro:assets";
+import statueFPMs from "@images/statue-fpms.jpg";
 
 interface Props {
   title: string;
 }
 
-const { title } = Astro.props;
+const { title: page } = Astro.props;
+
+const title = `${page === "Accueil" ? "" : `${page} | `}Fédé FPMs`;
+const description =
+  "La Fédération des étudiants FPMs aussi appelée la Fédé, a comme rôle de représenter les étudiants de la Polytech de Mons dans le contexte académique et folklorique";
+const image = await getImage({ src: statueFPMs, quality: 50 });
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
@@ -36,7 +43,18 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <link rel="canonical" href={canonicalURL} />
-    <title>Fédé FPMs{title === "Accueil" ? "" : ` | ${title}`}</title>
+    <title>{title}</title>
+    <meta name="og:title" content={title} />
+    <meta name="og:description" content={description} />
+    <meta name="og:type" content="website" />
+    <meta name="og:locale" content="be_FR" />
+    <meta name="og:url" content={canonicalURL} />
+    <meta name="og:image" content={image.src} />
+    <meta
+      name="og:image:alt"
+      content="Statue de la Faculté Polytechnique de Mons"
+    />
+    <meta name="og:site_name" content="Fédé FPMs" />
     <ViewTransitions />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <SpeedInsights />
