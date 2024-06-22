@@ -21,7 +21,9 @@ const description =
   "La Fédération des étudiants FPMs aussi appelée la Fédé, a comme rôle de représenter les étudiants de la Polytech de Mons dans le contexte académique et folklorique";
 const image = await getImage({ src: statueFPMs, quality: 50 });
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+  .toString()
+  .replace(/\/$/, "");
 ---
 
 <!doctype html>
@@ -67,6 +69,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     }
     <meta name="og:site_name" content="Fédé FPMs" />
     <ViewTransitions />
+    <!-- <style>
+      @view-transition {
+        navigation: auto; /* enabled! */
+      }
+    </style> -->
     <link rel="sitemap" href="/sitemap-index.xml" />
     <SpeedInsights />
     <AstroFont
