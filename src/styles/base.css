@@ -12,6 +12,9 @@
   h6 {
     @apply text-balance;
   }
+  img {
+    @apply [overflow-clip-margin:unset];
+  }
 }
 
 @tailwind components;
