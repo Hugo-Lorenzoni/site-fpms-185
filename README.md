@@ -1,6 +1,6 @@
 # Bienvenue sur site de la Fédération des étudiants de la Faculté Polytechnique de Mons 👋
 
-![Version](https://img.shields.io/badge/version-185-blue.svg?cacheSeconds=2592000)
+![Version](https://img.shields.io/badge/version-186-blue.svg?cacheSeconds=2592000)
 
 > Ce site a comme objectif la présentation des initiatives étudiantes en Polytech.
 
@@ -109,6 +109,6 @@ Any static assets, like images, can be placed in the `public/` directory.
 
 ## Author
 
-👤 **Commission web 185**
+👤 **Commission web 186**
 
 - Github: [@Hugo-Lorenzoni](https://github.com/Hugo-Lorenzoni)

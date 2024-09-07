@@ -1,7 +1,12 @@
 ---
-import PVIcon from "@icons/PVIcon.astro";
+import FileIcon from "@icons/FileIcon.astro";
 import QuestionIcon from "@icons/QuestionIcon.astro";
 import Layout from "@layouts/Layout.astro";
+
+import fs from "node:fs";
+
+const pvs = fs.readdirSync("./public/pv");
+const status = fs.readdirSync("./public/status");
 ---
 
 <Layout title="À propos">
@@ -24,14 +29,41 @@ import Layout from "@layouts/Layout.astro";
         Vous trouverez ici les PV des réunions organisées au sein de la Salle
         Fédé !
       </p>
-
-      <p class="flex gap-2"><PVIcon />Coming soon ...</p>
+      <ul class="inline-flex flex-col gap-2">
+        {
+          pvs.map((file) => (
+            <li>
+              <a
+                class="flex gap-2 duration-150 hover:opacity-50"
+                target="_blank"
+                href={`pv/${file}`}
+              >
+                <FileIcon /> {file}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
     </section>
     <section
       class="mx-auto space-y-2 rounded-lg border-r-4 border-blue-900 bg-white px-6 py-3 font-medium shadow-box"
     >
       <h2 class="text-xl">Statuts de la Fédérale</h2>
-      <p>Coming soon ...</p>
+      <ul class="inline-flex flex-col gap-2">
+        {
+          status.map((file) => (
+            <li>
+              <a
+                class="flex gap-2 duration-150 hover:opacity-50"
+                target="_blank"
+                href={`status/${file}`}
+              >
+                <FileIcon /> {file}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
     </section>
     <section
       class="mx-auto space-y-2 rounded-lg border-l-4 border-blue-900 bg-white px-6 py-3 font-medium shadow-box"

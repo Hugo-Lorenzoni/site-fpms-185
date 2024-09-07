@@ -17,9 +17,20 @@ const fêtes = {
   name: "Cercle des Fêtes",
   href: "/folklore/cercle-des-fetes",
   image: ComiteFêtes,
-  president: "Maxime Vandenhende",
-  tresorier: "Colin Huart",
-  secretaire: "Charlotte Blondel",
+  comite: [
+    {
+      role: "Président",
+      name: "Nicolas Destraix",
+    },
+    {
+      role: "Trésorier",
+      name: "Bruno Delhaye",
+    },
+    {
+      role: "Secrétaire",
+      name: "Ugo Falcinelli",
+    },
+  ],
 };
 
 const régionales = [
@@ -103,9 +114,13 @@ const link = {
         >
           <h3 class="mx-auto max-w-fit pb-4 text-xl">Comité</h3>
           <ul>
-            <li><strong>Président :</strong>{" "}{fêtes.president}</li>
-            <li><strong>Trésorier :</strong>{" "}{fêtes.tresorier}</li>
-            <li><strong>Secrétaire :</strong>{" "}{fêtes.secretaire}</li>
+            {
+              fêtes.comite.map((member) => (
+                <li>
+                  <strong>{member.role} :</strong> {member.name}
+                </li>
+              ))
+            }
           </ul>
         </div>
       </div>

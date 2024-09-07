@@ -4,15 +4,15 @@ import { Image } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
 
 import statueFPMs from "@images/statue-fpms.jpg";
-import comiteFede from "@images/comités/fédé.jpg";
+import comiteFede from "@images/comités/fede.jpg";
 
-const comite = {
-  president: "Tom Leroy",
-  vp: "Antoine Collet",
-  secretaire: "Louise Lemineur",
-  tresorier: "Antoine Musin",
-  dre: "Léo Vander Beken",
-};
+const comite = [
+  { role: "Présidente", name: "Elisa Bourez" },
+  { role: "Vice-présidente", name: "Zoé Bon" },
+  { role: "Secrétaire", name: "Philippe Asvestaris" },
+  { role: "Trésorier", name: "Rémy Lempire" },
+  { role: "DRE", name: "Audran Duquène" },
+];
 ---
 
 <Layout title="Accueil">
@@ -85,11 +85,14 @@ const comite = {
       >
         <h2 class="mx-auto max-w-fit pb-4 text-xl">La Fédérale</h2>
         <ul>
-          <li><strong>Président :</strong>{" "}{comite.president}</li>
-          <li><strong>Vice-président :</strong>{" "}{comite.vp}</li>
-          <li><strong>Secrétaire :</strong>{" "}{comite.secretaire}</li>
-          <li><strong>Trésorier :</strong>{" "}{comite.tresorier}</li>
-          <li><strong>DRE* :</strong>{" "}{comite.dre}</li>
+          {
+            comite.map((member) => (
+              <li>
+                <strong>{member.role} :</strong> {member.name}
+              </li>
+            ))
+          }
+
           <li class="text-xs italic">*Délégué aux Relations Extérieures</li>
         </ul>
       </div>
