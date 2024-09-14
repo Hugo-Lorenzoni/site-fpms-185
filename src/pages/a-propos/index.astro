@@ -27,18 +27,18 @@ const status = fs.readdirSync("./public/status");
       </p>
       <p>
         Vous trouverez ici les PV des réunions organisées au sein de la Salle
-        Fédé !
+        Fédé ainsi que ceux de nos Assemblées Générales (AG) !
       </p>
       <ul class="inline-flex flex-col gap-2">
         {
-          pvs.map((file) => (
+          pvs.reverse().map((file) => (
             <li>
               <a
                 class="flex gap-2 duration-150 hover:opacity-50"
                 target="_blank"
                 href={`pv/${file}`}
               >
-                <FileIcon /> {file}
+                <FileIcon /> {file.replace(".pdf", "").replace(/_/g, " ")}
               </a>
             </li>
           ))
@@ -75,13 +75,14 @@ const status = fs.readdirSync("./public/status");
         <h3 class="font-semibold">
           Puis-je obtenir une carte fédé si je ne suis pas baptisé ?
         </h3>
-        <p>Oui.</p>
+        <p>Oui, la carte fédé est accessible à tous.</p>
       </section>
       <section>
         <h3 class="font-semibold">
-          Puis-je obtenir une carte fédé si je ne suis pas en Polytech ?
+          Puis-je obtenir une carte fédé si je ne fait pas mes études en
+          Polytech ?
         </h3>
-        <p>Oui.</p>
+        <p>Oui</p>
       </section>
     </section>
   </main>
