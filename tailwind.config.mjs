@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require("tailwindcss/defaultTheme");
-const plugin = require("tailwindcss/plugin");
+import defaultTheme from "tailwindcss/defaultTheme";
+import plugin from "tailwindcss/plugin";
+
+// const defaultTheme = require("tailwindcss/defaultTheme");
+// const plugin = require("tailwindcss/plugin");
 
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -32,7 +35,8 @@ export default {
       },
       dropShadow: {
         // Drop shadow white pour le
-        // "Fédération des Étudiants" de la page d'accueil
+        // "Fédération des Étudiants"
+        // de la page d'accueil
         white: ["0 1px 4px white", "0 0px 5px white"],
         // Drop shadow pour le titre des liens dans <Grid />
         normal: [
@@ -53,7 +57,7 @@ export default {
     },
   },
   plugins: [
-    plugin(function ({ matchUtilities, theme }) {
+    plugin(({ matchUtilities, theme }) => {
       matchUtilities(
         {
           "text-shadow": (value) => ({
