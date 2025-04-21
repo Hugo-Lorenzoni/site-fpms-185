@@ -1,6 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import Links from "@components/Links.astro";
+import Links, { LinkType } from "@components/Links.astro";
 
 import _CommHisto from "@images/commissions/ecomission.jpg";
 
@@ -14,10 +14,10 @@ const comite = [
   { role: "", name: "Tom Lecat" },
   { role: "", name: "Rémy Lempire" },
 ];
-const links: { name: string; type: string; url: string }[] | undefined = [
+const links: { name: string; type: LinkType; url: string }[] | undefined = [
   {
     name: "Instagram",
-    type: "INSTAGRAM",
+    type: LinkType.INSTAGRAM,
     url: "https://www.instagram.com/ecomission185/",
   },
 ];

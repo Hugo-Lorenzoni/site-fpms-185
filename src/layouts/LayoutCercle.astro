@@ -1,7 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Comite from "@components/Comite.astro";
-import Links from "@components/Links.astro";
+import Links, { type LinkType } from "@components/Links.astro";
 
 import { Image } from "astro:assets";
 import Video from "@components/Video.astro";
@@ -14,7 +14,7 @@ interface Props {
   imageComite: ImageMetadata;
   links?: {
     name: string;
-    type: string;
+    type: LinkType;
     url: string;
   }[];
 }

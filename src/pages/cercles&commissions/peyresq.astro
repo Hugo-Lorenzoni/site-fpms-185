@@ -1,6 +1,7 @@
 ---
 import LayoutCercle from "@layouts/LayoutCercle.astro";
 import { Image } from "astro:assets";
+import { LinkType } from "@components/Links.astro";
 
 import _Peyresq from "@images/cercles/peyresq.jpg";
 import imageComite from "@images/comités/peyresq.jpg";
@@ -20,10 +21,10 @@ const comite = [
   { role: "Secrétaire", name: "Martin Lempire" },
 ];
 
-const links: { name: string; type: string; url: string }[] | undefined = [
+const links: { name: string; type: LinkType; url: string }[] | undefined = [
   {
     name: "Groupe Facebook (Privé)",
-    type: "FACEOOK",
+    type: LinkType.FACEBOOK,
     url: "https://www.facebook.com/groups/638484686210133",
   },
 ];

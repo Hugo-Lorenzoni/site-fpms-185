@@ -1,6 +1,7 @@
 ---
 import LayoutCercle from "@layouts/LayoutCercle.astro";
 import { Image } from "astro:assets";
+import { LinkType } from "@components/Links.astro";
 
 import _Mutu from "@images/cercles/mutu.jpg";
 import imageComite from "@images/comités/mutu.jpg";
@@ -26,12 +27,12 @@ const comite = [
 const links = [
   {
     name: "mutuelle@umons.ac.be",
-    type: "EMAIL",
+    type: LinkType.EMAIL,
     url: "mailto:mutuelle@umons.ac.be",
   },
   {
     name: "Facebook",
-    type: "FACEBOOK",
+    type: LinkType.FACEBOOK,
     url: "https://www.facebook.com/profile.php?id=100064820553784",
   },
 ];

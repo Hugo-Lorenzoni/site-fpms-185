@@ -1,5 +1,6 @@
 ---
 import LayoutCercle from "@layouts/LayoutCercle.astro";
+import { LinkType } from "@components/Links.astro";
 
 import _Magellan from "@images/cercles/magellan.jpg";
 import imageComite from "@images/comités/magellan.jpg";
@@ -19,33 +20,37 @@ const comite = [
 const links = [
   {
     name: "Site web",
-    type: "WEBSITE",
+    type: LinkType.WEBSITE,
     url: "https://www.magellan.fpms.ac.be/",
   },
   {
     name: "fpms.magellan@umons.ac.be",
-    type: "EMAIL",
+    type: LinkType.EMAIL,
     url: "mailto:fpms.magellan@umons.ac.be",
   },
   {
     name: "Facebook",
-    type: "FACEBOOK",
+    type: LinkType.FACEBOOK,
     url: "https://www.facebook.com/CercleMagellan",
   },
   {
     name: "Instagram",
-    type: "INSTAGRAM",
+    type: LinkType.INSTAGRAM,
     url: "https://www.instagram.com/cercle_magellan_fpms",
   },
-  { name: "Twitter", type: "TWITTER", url: "https://twitter.com/MagellanFPMs" },
+  {
+    name: "Twitter",
+    type: LinkType.TWITTER,
+    url: "https://twitter.com/MagellanFPMs",
+  },
   {
     name: "Youtube",
-    type: "YOUTUBE",
+    type: LinkType.YOUTUBE,
     url: "https://www.youtube.com/@cerclemagellanfpms",
   },
   {
     name: "Game - Twitter",
-    type: "TWITTER",
+    type: LinkType.TWITTER,
     url: "https://twitter.com/LAN_Party_Game",
   },
 ];

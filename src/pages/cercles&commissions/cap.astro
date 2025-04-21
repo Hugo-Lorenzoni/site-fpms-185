@@ -1,6 +1,7 @@
 ---
 import LayoutCercle from "@layouts/LayoutCercle.astro";
 import { Image } from "astro:assets";
+import type { LinkType } from "@components/Links.astro";
 
 import _CAP from "@images/cercles/cap.jpg";
 import imageComite from "@images/comités/cap.jpg";
@@ -12,7 +13,7 @@ const comite = [
   { role: "Président", name: "Ugo Canet" },
   { role: "Trésorier", name: "Théo Lombardo" },
 ];
-const links: { name: string; type: string; url: string }[] | undefined = [];
+const links: { name: string; type: LinkType; url: string }[] | undefined = [];
 ---
 
 <LayoutCercle

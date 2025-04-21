@@ -1,5 +1,6 @@
 ---
 import LayoutCercle from "@layouts/LayoutCercle.astro";
+import { LinkType } from "@components/Links.astro";
 
 import _CPV from "@images/cercles/cpv.jpg";
 import imageComite from "@images/comités/cpv.jpg";
@@ -32,17 +33,17 @@ const comite = [
 const links = [
   {
     name: "Site web",
-    type: "WEBSITE",
+    type: LinkType.WEBSITE,
     url: "https://cerclephotovideo.fpms.ac.be/",
   },
   {
     name: "Instagram",
-    type: "INSTAGRAM",
+    type: LinkType.INSTAGRAM,
     url: "https://www.instagram.com/cpvfpms/",
   },
   {
     name: "Facebook",
-    type: "FACEBOOK",
+    type: LinkType.FACEBOOK,
     url: "https://www.facebook.com/groups/611148859605497/",
   },
 ];

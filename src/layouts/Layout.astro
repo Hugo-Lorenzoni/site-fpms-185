@@ -3,7 +3,8 @@ import Footer from "@components/Footer.astro";
 import Nav from "@components/Nav.astro";
 import SpeedInsights from "@vercel/speed-insights/astro";
 
-import { ViewTransitions } from "astro:transitions";
+// import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import { AstroFont } from "astro-font";
 
 import "@styles/base.css";
@@ -68,7 +69,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
       )
     }
     <meta name="og:site_name" content="Fédé FPMs" />
-    <ViewTransitions />
+    <!-- <ViewTransitions /> -->
+    <ClientRouter />
     <!-- <style>
       @view-transition {
         navigation: auto; /* enabled! */

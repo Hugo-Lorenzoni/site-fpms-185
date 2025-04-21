@@ -1,5 +1,6 @@
 ---
 import LayoutCercle from "@layouts/LayoutCercle.astro";
+import { LinkType } from "@components/Links.astro";
 
 import _Bar from "@images/cercles/bar.jpg";
 import imageComite from "@images/comités/bar.jpg";
@@ -15,7 +16,7 @@ const comite = [
 const links = [
   {
     name: "Facebook",
-    type: "FACEBOOK",
+    type: LinkType.FACEBOOK,
     url: "https://www.facebook.com/groups/14030439484/",
   },
 ];

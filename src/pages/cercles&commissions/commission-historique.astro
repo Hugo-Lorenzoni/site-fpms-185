@@ -1,6 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import Links from "@components/Links.astro";
+import Links, { LinkType } from "@components/Links.astro";
 
 import _CommHisto from "@images/commissions/commission-historique.jpg";
 import _1100_0 from "@images/locaux/1100.jpg";
@@ -21,25 +21,25 @@ const comite = [
   { role: "", name: "Thomas Descamps" },
   { role: "", name: "Nathan Marcus" },
 ];
-const links: { name: string; type: string; url: string }[] | undefined = [
+const links: { name: string; type: LinkType; url: string }[] | undefined = [
   {
     name: "Site web",
-    type: "WEBSITE",
+    type: LinkType.WEBSITE,
     url: "https://historique.fede.fpms.ac.be",
   },
   {
     name: "Facebook",
-    type: "FACEBOOK",
+    type: LinkType.FACEBOOK,
     url: "https://www.facebook.com/CommissionHistoriqueFPMs",
   },
   {
     name: "historique.fpms@gmail.com",
-    type: "EMAIL",
+    type: LinkType.EMAIL,
     url: "mailto:historique.fpms@gmail.com",
   },
   {
     name: "Ancien site web",
-    type: "WEBSITE",
+    type: LinkType.WEBSITE,
     url: "https://historiquefpms.wordpress.com",
   },
 ];

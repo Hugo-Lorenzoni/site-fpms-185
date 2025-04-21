@@ -1,5 +1,6 @@
 ---
 import LayoutCercle from "@layouts/LayoutCercle.astro";
+import type { LinkType } from "@components/Links.astro";
 
 import _Frontalière from "@images/régionales/frontaliere.jpg";
 import imageComite from "@images/comités/frontaliere.jpg";
@@ -14,7 +15,7 @@ const comite = [
   { role: "DRI-R", name: "Mano Besserer" },
 ];
 
-const links: { name: string; type: string; url: string }[] | undefined = [];
+const links: { name: string; type: LinkType; url: string }[] | undefined = [];
 ---
 
 <LayoutCercle

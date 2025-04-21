@@ -1,6 +1,7 @@
 ---
 import LayoutCercle from "@layouts/LayoutCercle.astro";
 import { Image } from "astro:assets";
+import { LinkType } from "@components/Links.astro";
 
 import _Sports from "@images/cercles/sports.jpg";
 import imageComite from "@images/comités/sports.jpg";
@@ -30,17 +31,17 @@ const comite = [
 const links = [
   {
     name: "Instagram",
-    type: "INSTAGRAM",
+    type: LinkType.INSTAGRAM,
     url: "https://www.instagram.com/cercle_des_sports_fpms/",
   },
   {
     name: "Facebook",
-    type: "FACEBOOK",
+    type: LinkType.FACEBOOK,
     url: "https://www.facebook.com/Cercle.des.Sports",
   },
   {
     name: "Rendez-vous sportifs Polytech - Groupe (Privé) Facebook",
-    type: "FACEBOOK",
+    type: LinkType.FACEBOOK,
     url: "https://www.facebook.com/groups/353273941735601",
   },
 ];
@@ -197,7 +198,7 @@ const links = [
       ou que tu as envie de t'impliquer dans l'organisation des entrainements,
       n'hésite pas à contacter un des membres du comité ou à te renseigner sur <a
         class="text-blue-900 underline"
-        href={links.find((link) => link.type === "FACEBOOK")?.url}
+        href={links.find((link) => link.type === LinkType.FACEBOOK)?.url}
         >notre page Facebook « Cercle des Sports F.P.Ms »</a
       > !
     </p>

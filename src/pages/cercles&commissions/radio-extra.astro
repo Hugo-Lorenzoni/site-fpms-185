@@ -1,5 +1,6 @@
 ---
 import LayoutCercle from "@layouts/LayoutCercle.astro";
+import { LinkType } from "@components/Links.astro";
 
 import _Radio from "@images/cercles/radio-extra.jpg";
 import imageComite from "@images/comités/radio-extra.jpg";
@@ -31,27 +32,27 @@ const comite = [
 const links = [
   {
     name: "Facebook",
-    type: "FACEBOOK",
+    type: LinkType.FACEBOOK,
     url: "https://www.facebook.com/radioextra69",
   },
   {
     name: "Instagram",
-    type: "INSTAGRAM",
+    type: LinkType.INSTAGRAM,
     url: "https://www.instagram.com/radio_extra/",
   },
   {
     name: "Youtube",
-    type: "YOUTUBE",
+    type: LinkType.YOUTUBE,
     url: "https://www.youtube.com/@radioextra6117",
   },
   {
     name: "TikTok",
-    type: "TIKTOK",
+    type: LinkType.TIKTOK,
     url: "https://www.tiktok.com/@radio_extra",
   },
   {
     name: "Spotify",
-    type: "SPOTIFY",
+    type: LinkType.SPOTIFY,
     url: "https://open.spotify.com/user/315x2bk4yajnpsavcryx22euuoxy?si=lu14bM5ET4uTSOP6wXOFMQ",
   },
 ];

@@ -9,10 +9,22 @@ import Website from "@icons/Website.astro";
 import Tiktok from "@icons/Tiktok.astro";
 import Linktree from "@icons/Linktree.astro";
 
+export enum LinkType {
+  FACEBOOK = "FACEBOOK",
+  TWITTER = "TWITTER",
+  INSTAGRAM = "INSTAGRAM",
+  YOUTUBE = "YOUTUBE",
+  EMAIL = "EMAIL",
+  SPOTIFY = "SPOTIFY",
+  WEBSITE = "WEBSITE",
+  TIKTOK = "TIKTOK",
+  LINKTREE = "LINKTREE",
+}
+
 interface Props {
   links: {
     name: string;
-    type: string;
+    type: LinkType;
     url: string;
   }[];
 }
@@ -43,8 +55,8 @@ const { links } = Astro.props;
                 class="inline-flex gap-2 underline duration-150 hover:translate-x-2 hover:opacity-80"
                 href={link.url}
               >
-                {link.type === "FACEBOOK" && <Facebook />}
-                {link.type === "TWITTER" && <Twitter />}
+                {link.type === LinkType.FACEBOOK && <Facebook />}
+                {link.type === LinkType.TWITTER && <Twitter />}
                 {link.type === "INSTAGRAM" && <Instagram />}
                 {link.type === "YOUTUBE" && <Youtube />}
                 {link.type === "EMAIL" && <Mail />}

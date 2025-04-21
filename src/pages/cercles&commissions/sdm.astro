@@ -1,6 +1,7 @@
 ---
 import LayoutCercle from "@layouts/LayoutCercle.astro";
 import { Image } from "astro:assets";
+import { LinkType } from "@components/Links.astro";
 
 import _SDM from "@images/cercles/sdm.jpg";
 import imageComite from "@images/comités/sdm.jpg";
@@ -20,22 +21,22 @@ const comite = [
 const links = [
   {
     name: "Instagram",
-    type: "INSTAGRAM",
+    type: LinkType.INSTAGRAM,
     url: "https://www.instagram.com/sonodansemusique_fpms/",
   },
   {
     name: "Facebook",
-    type: "FACEBOOK",
+    type: LinkType.FACEBOOK,
     url: "https://www.facebook.com/sono.danse.musique.fpms",
   },
   {
     name: "Youtube",
-    type: "YOUTUBE",
+    type: LinkType.YOUTUBE,
     url: "https://www.youtube.com/channel/UCmQvRPxJILoCeJW013MdEtA",
   },
   {
     name: "Playlists partagées",
-    type: "SPOTIFY",
+    type: LinkType.SPOTIFY,
     url: "https://linktr.ee/SonoDanseMusique_FPMs",
   },
 ];

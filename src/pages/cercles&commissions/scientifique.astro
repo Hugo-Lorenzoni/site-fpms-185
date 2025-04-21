@@ -1,5 +1,6 @@
 ---
 import LayoutCercle from "@layouts/LayoutCercle.astro";
+import { LinkType } from "@components/Links.astro";
 
 import _Scientifique from "@images/cercles/scientifique.jpg";
 import imageComite from "@images/comités/scientifique.jpg";
@@ -16,10 +17,10 @@ const comite = [
   { role: "Secrétaire", name: "Martin Vleminck" },
 ];
 
-const links: { name: string; type: string; url: string }[] | undefined = [
+const links: { name: string; type: LinkType; url: string }[] | undefined = [
   {
     name: "Facebook",
-    type: "FACEBOOK",
+    type: LinkType.FACEBOOK,
     url: "https://www.facebook.com/profile.php?id=100064300376795",
   },
 ];

@@ -1,6 +1,7 @@
 ---
 import LayoutCercle from "@layouts/LayoutCercle.astro";
 import { Image } from "astro:assets";
+import { LinkType } from "@components/Links.astro";
 
 import _Q from "@images/cercles/q.jpg";
 import imageComite from "@images/comités/q.jpg";
@@ -32,32 +33,32 @@ const comite = [
 const links = [
   {
     name: "Facebook",
-    type: "FACEBOOK",
+    type: LinkType.FACEBOOK,
     url: "https://www.facebook.com/cercle.culturel.fpms",
   },
   {
     name: "Local de projection 9/10 - Facebook",
-    type: "FACEBOOK",
+    type: LinkType.FACEBOOK,
     url: "https://www.facebook.com/localprojection",
   },
   {
     name: "BibliCité 11/12 - Facebook",
-    type: "FACEBOOK",
+    type: LinkType.FACEBOOK,
     url: "https://www.facebook.com/groups/272164387493",
   },
   {
     name: "Groupe Jeux - Facebook",
-    type: "FACEBOOK",
+    type: LinkType.FACEBOOK,
     url: "https://www.facebook.com/groups/729600190404859",
   },
   {
     name: "Instagram",
-    type: "INSTAGRAM",
+    type: LinkType.INSTAGRAM,
     url: "https://www.instagram.com/qulturel_fpms/",
   },
   {
     name: "Linktree",
-    type: "LINKTREE",
+    type: LinkType.LINKTREE,
     url: "https://linktr.ee/Qulturel_FPMs",
   },
 ];

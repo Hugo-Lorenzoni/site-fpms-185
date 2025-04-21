@@ -1,6 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import Links from "@components/Links.astro";
+import Links, { type LinkType } from "@components/Links.astro";
 
 import _Web from "@images/commissions/commission-web.jpg";
 
@@ -15,7 +15,7 @@ const comite = [
   { role: "", name: "Lucas Lebrun" },
   { role: "", name: "Guillaume Hinnekens" },
 ];
-const links: { name: string; type: string; url: string }[] | undefined = [];
+const links: { name: string; type: LinkType; url: string }[] | undefined = [];
 ---
 
 <Layout title={commission}>

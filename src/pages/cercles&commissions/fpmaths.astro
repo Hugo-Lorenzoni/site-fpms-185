@@ -1,7 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Comite from "@components/Comite.astro";
-import Links from "@components/Links.astro";
+import Links, { LinkType } from "@components/Links.astro";
 
 import _FPMaths from "@images/commissions/fpmaths.jpg";
 import imageComite from "@images/comités/fpmaths.jpg";
@@ -16,25 +16,25 @@ const comite = [
   { role: "Responsable (Charleroi)", name: "Victor Fatoux" },
   { role: "Responsable (Tournai)", name: "Chloé Pierart" },
 ];
-const links: { name: string; type: string; url: string }[] | undefined = [
+const links: { name: string; type: LinkType; url: string }[] | undefined = [
   {
     name: "Instagram",
-    type: "INSTAGRAM",
+    type: LinkType.INSTAGRAM,
     url: "https://www.instagram.com/fpmaths/",
   },
   {
     name: "Facebook",
-    type: "FACEBOOK",
+    type: LinkType.FACEBOOK,
     url: "https://www.facebook.com/FPMaths",
   },
   {
     name: "fpmaths@gmail.com",
-    type: "EMAIL",
+    type: LinkType.EMAIL,
     url: "mailto:fpmaths@gmail.com",
   },
   {
     name: "Linktree",
-    type: "LINKTREE",
+    type: LinkType.LINKTREE,
     url: "https://linktr.ee/fpmaths",
   },
 ];
